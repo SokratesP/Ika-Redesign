@@ -6,9 +6,18 @@
 <body>
 
 <b>
-	<?php 
+	<?php
 	print "Hello, Wolrd!";
 	?>
+</b>
+
+<b>
+	<?php
+
+	$email = "sokrates@gmail.com";
+	print $email;
+	?>
+
 </b>
 
 <li>mpla</li>
