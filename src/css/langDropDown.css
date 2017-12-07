@@ -19,7 +19,6 @@ body {
 }
 
 .languagepicker:hover {
-	/* don't forget the 1px border */
 	height: 81px;
 }
 
@@ -53,10 +52,5 @@ body {
 }
 
 .large:hover {
-	/*
-	don't forget the 1px border!
-	The first language is 40px heigh,
-	the others are 41px
-	*/
 	height: 245px;
 }
