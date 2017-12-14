@@ -1,11 +1,14 @@
-div.up {
-	position: relative;
+div.up 
+{
+	position: fixed;
+	background-color: #d0d1cf;
     top: 0px;
     left: 0px;
     height: 100px;
-    border: 3px solid #73AD21;
+    width: 100%;
 }
-div.upImg {
+div.upImg 
+{
 	position: absolute;
 	top: 0px;
     left: 0px;
@@ -13,7 +16,8 @@ div.upImg {
 	height: 100px;    
 }
 
-div.upTitle {
+div.upTitle 
+{
 	position: absolute;
 	
 	top: 30px;
@@ -21,7 +25,8 @@ div.upTitle {
 	width: auto;
 	height: auto;
 }
-div.upLogIn {
+div.upLogIn 
+{
 	position: absolute;
 	
 	top: 0px;
@@ -29,7 +34,8 @@ div.upLogIn {
 	width: auto;
 	height: auto;
 }
-div.logButton {
+div.logButton 
+{
 	position: absolute;
     background-color: #4CAF50; /* Green */
     right: 3px;
@@ -40,4 +46,51 @@ div.logButton {
     text-decoration: none;
     display: inline-block;
     font-size: 10px;
+}
+
+div.navbar 
+{
+  overflow: hidden;
+  background-color: #cfd1d0;
+  position: fixed;
+  top: 100px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+}
+
+div.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+div.downBar
+{
+	position: relative;
+    background-color: #cfd1d0; /* Grey */
+    border: none;
+    top: 450px;
+    left: 0px;
+    height: 250px;
+    align-self: center;
+    color: black;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+div.bottom 
+{
+	position: relative;
+    background-color: #cfd1d0; /* Grey */
+    border: none;
+    top: 700px;
+    left: 0px;
+    height: 20px;
+    align-self: center;
+    color: black;
+    padding: 5px 10px;
+    font-size: 15px;
 }
