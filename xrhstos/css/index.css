@@ -1,0 +1,43 @@
+div.up {
+	position: relative;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+div.upImg {
+	position: absolute;
+	top: 0px;
+    left: 0px;
+	width: 100px;
+	height: 100px;    
+}
+
+div.upTitle {
+	position: absolute;
+	
+	top: 30px;
+    left: 400px;
+	width: auto;
+	height: auto;
+}
+div.upLogIn {
+	position: absolute;
+	
+	top: 0px;
+    right: 100px;
+	width: auto;
+	height: auto;
+}
+div.logButton {
+	position: absolute;
+    background-color: #4CAF50; /* Green */
+    right: 3px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
