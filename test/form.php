@@ -10,8 +10,8 @@
 
     $sql = "SELECT id FROM myusers WHERE username = '$myusername' and passcode = '$mypassword' ";
     $result = mysqli_query($db,$sql);
-    #$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    #$active = $row['active'];
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $active = $row['active'];
 
     $count  = mysqli_num_rows($result);
 
