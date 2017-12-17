@@ -28,8 +28,8 @@ session_start();
           die("Connection failed: " . mysqli_connect_error());
       }
 
-      #$sql = "SELECT * FROM myusers WHERE username='".$_SESSION['login_user'];."'";
-      $result = mysqli_query($conn, "SELECT * FROM `myusers` WHERE `username`='$_SESSION['user_id'];'");
+      $sql = "SELECT * FROM myusers WHERE username='$_SESSION['login_user']'";
+      $result = mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($result) > 0) {
           // output data of each row
