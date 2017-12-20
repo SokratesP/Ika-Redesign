@@ -1,96 +1,207 @@
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.popbut {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.popbut:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.popbut-can {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container-log {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10102142021; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
 div.up 
 {
-	position: fixed;
-	background-color: #d0d1cf;
+	background-color: #21366A;
     top: 0px;
     left: 0px;
-    height: 100px;
+    height: auto;
     width: 100%;
 }
 div.upImg 
 {
-	position: absolute;
-	top: 0px;
-    left: 0px;
-	width: 100px;
-	height: 100px;    
+	/*position: absolute;*/
+	/*top: 5px;
+    left: 15px;*/
+	/*width: 100%; */
 }
 
 div.upTitle 
 {
-	position: absolute;
-	
-	top: 30px;
-    left: 400px;
-	width: auto;
-	height: auto;
+	/*position: absolute;*/
+	color: white;
+	padding-left: 150px;
+	padding-top: 8px;
+	/*top: 30px;
+    left: 400px;*/
+	/*width: auto;
+	height: auto;*/
 }
 div.upLogIn 
 {
-	position: absolute;
+	/*position: absolute;*/
 	
 	top: 0px;
-    right: 100px;
-	width: auto;
-	height: auto;
+    right: 25px;
+	padding-top: 15px;
+	/*width: auto;
+	height: auto;*/
 }
-div.logButton 
+div.langdrd 
 {
 	position: absolute;
-    background-color: #4CAF50; /* Green */
     right: 3px;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
+	display: inline-block;
+	
+	/*display:table-cell;
+	*/
+    /*background-color: #4CAF50;*/ 
+    
+
 }
 
-div.navbar 
+div.navbar1 
 {
-  overflow: hidden;
-  background-color: #cfd1d0;
-  position: fixed;
-  top: 100px;
+  position: sticky;
+  top: 0px;
   left: 0px;
-  height: 50px;
+  height: 100px;
   width: 100%;
+  z-index: 2000;
 }
 
-div.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.nav-item{
+	padding-left:40px;
+	font-size: 1.5em;
 }
-div.downBar
+div.body
 {
-	position: relative;
-    background-color: #cfd1d0; /* Grey */
-    border: none;
-    top: 450px;
-    left: 0px;
-    height: 250px;
-    align-self: center;
-    color: black;
-    padding: 5px 10px;
-    font-size: 15px;
+	position: absolute;
 }
+
 div.bottom 
 {
-	position: relative;
+	position: absolute;
     background-color: #cfd1d0; /* Grey */
     border: none;
-    top: 700px;
+    bottom: 0px;
     left: 0px;
-    height: 20px;
+    height: auto;
+    width: 100%;
     align-self: center;
     color: black;
-    padding: 5px 10px;
     font-size: 15px;
 }
+
+footer{
+	color:white;
+}
+

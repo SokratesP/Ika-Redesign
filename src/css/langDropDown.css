@@ -1,62 +1,114 @@
-* {
-	font-family: arial;
-}
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
+/* LANGUAGE SWITCHER */
+/* ui-dropdown-list */
 body {
-	background-color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
 }
 
-.languagepicker {
-	background-color: #FFF;
-	display: inline-block;
-	padding: 0;
-	height: 40px;
-	overflow: hidden;
-	transition: all .3s ease;
-	margin: 0 50px 10px 0;
-	vertical-align: top;
-	float: left;
+.ui-dropdown-list {
+  position: relative;
 }
 
-.languagepicker:hover {
-	/* don't forget the 1px border */
-	height: 81px;
+p.ui-dropdown-list-trigger {
+	margin-top: 0;
 }
 
-.languagepicker a{
-	color: #000;
-	text-decoration: none;
+.ui-dropdown-list-trigger strong {
+	position: relative;
+	z-index: 999;
 }
 
-.languagepicker li {
+.ui-dropdown-list-trigger strong:after {
 	display: block;
-	padding: 0px 20px;
-	line-height: 40px;
-	border-top: 1px solid #EEE;
+	position: absolute;
+	content: '';
+	right: 5px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #012D6B;
 }
 
-.languagepicker li:hover{
-	background-color: #EEE;
+.ui-dropdown-list-trigger strong,
+.ui-dropdown-list ul a {
+	display: block;
+	width: 80px;
+	cursor: pointer;
+	padding: 6px 8px;
+	font-size: 13px;
+	line-height: 13px;
+	color: #012D6B;
+	font-weight: normal;
 }
 
-.languagepicker a:first-child li {
-	border: none;
-	background: #FFF !important;
+.ui-dropdown-list ul {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 25px;
+	margin-top: 0;
+	padding: 0;
+	z-index: 1000;
 }
 
-.languagepicker li img {
-	margin-right: 5px;
+.ui-dropdown-list li {
+	list-style-type: none;
 }
 
-.roundborders {
-	border-radius: 5px;
+.ui-dropdown-list ul a,
+.ui-dropdown-list ul a:link,
+.ui-dropdown-list ul a:visited {
+	position: relative;
+	display: block;
+	float: right;
+	background-color: #D9CBA2;
 }
 
-.large:hover {
-	/*
-	don't forget the 1px border!
-	The first language is 40px heigh,
-	the others are 41px
-	*/
-	height: 245px;
+.ui-dropdown-list ul a:hover,
+.ui-dropdown-list ul a:focus {
+	border-bottom: none;
+	background-color: #009AFF;
+	color: #fff;
+}
+
+/* JS interactivity */
+.no-js .ui-dropdown-list ul,
+.ui-dropdown-list.active ul {
+	display: block;
+}
+
+.ui-dropdown-list.active strong {
+	background-color: #012D6B;
+	color: #fff;
+}
+
+.ui-dropdown-list.active strong:after {
+	border-top-color: #fff;
+}
+
+#lang-switcher a,
+#lang-switcher strong {
+	padding-left: 30px;
+	background-image: url(../images/flag-de.gif);
+	background-repeat: no-repeat;
+	background-position: 8px center;
+}
+
+#lang-switcher a.en,
+#lang-switcher .en strong {
+	background-image: url(../images/flag-en.gif);
+}
+
+#lang-switcher a.fr,
+#lang-switcher .fr strong {
+	background-image: url(../images/flag-fr.gif);
+}
+
+#lang-switcher strong {
+	float: right;
 }
