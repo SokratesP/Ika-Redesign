@@ -32,35 +32,49 @@
       </div>
         <div class="upTitle col-6"><h1>I.K.A.</h1></div>
         
-        <div class="upLogIn col-1">
+        <div class="upLogIn col-2">
         <button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" >Είσοδος</button>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
+          <div id="id01" class="modal">
+            
+            <form class="modal-content animate" action="/action_page.php">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+              </div>
 
-    <div class="container-log">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+              <div class="container-log">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button class="popbut" type="submit">Login</button>
-      <input type="checkbox" checked="checked"> Remember me
-    </div>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                <button class="popbut" type="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me
+              </div>
 
-    <div class="container-log" style="background-color:#f1f1f1">
-      <button class="popbut-can" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-</div>
+              <div class="container-log" style="background-color:#f1f1f1">
+                <button class="popbut-can" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <button type="button" class="btn btn-primary">Ελληνικά</button>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Deutsch</a>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <font size="2"><a href="pages/404.html">Δεν έχω λογαριασμό</a></font>
+        </div>
         <!-- Button to open the modal login form -->
 
        <!--  <div class="upLogIn col-4">
