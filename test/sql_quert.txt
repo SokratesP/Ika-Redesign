@@ -1,0 +1,5 @@
+CREATE TABLE myusers(
+  id INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(20) NOT NULL,
+  passcode VARCHAR(20) NOT NULL,
+  primary key ( id ));
