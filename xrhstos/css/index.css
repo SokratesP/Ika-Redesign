@@ -201,7 +201,13 @@ div.bottom
     font-size: 15px;
 }
 
-footer{
-	color:white;
-}
 
+footer {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow:hidden;
+    color: white;
+}

@@ -1,0 +1,27 @@
+.breadcrump{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+.form-group-si{
+	margin-top: 15px;
+}
+
+.control-label{
+	font-weight: 600;
+}
+
+.form-control-si{
+	border-radius: 3px;
+}
+
+footer {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow:hidden;
+}
