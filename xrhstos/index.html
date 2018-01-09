@@ -1,147 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Heroic Features - Start Bootstrap Template</title>
-
+    <title>Ικα-Αρχικη</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/test.css" type="text/css"/>
     <link rel="stylesheet" href="css/index.css" type="text/css"/>
-<!--     <link rel="stylesheet" type="text/css" href="css/langDropDown.css"> -->
+    <!--     <link rel="stylesheet" type="text/css" href="css/langDropDown.css"> -->
     <!-- <link href="css/heroic-features.css" rel="stylesheet"> -->
-
   </head>
 
   <body>
 
     <!-- Navigation -->
-
     <div class="up">
       <div class="row">
-      <div class="upImg col-4" style="padding-right: 10px;">
-        <img src="images/logo.png" width="186" height="70">
-      </div>
-        <div class="upTitle col-6"><h1>I.K.A.</h1></div>
-
+        <div class="upImg col-4" style="padding-right: 10px;">
+          <img src="images/logo.png" width="186" height="70">
+        </div>
+        <div class="upTitle col-6">
+          <h1>I.K.A.</h1>
+        </div>
         <div class="upLogIn col-2">
-        <button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" >Είσοδος</button>
-
+          <button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" >Είσοδος</button>
           <div id="id01" class="modal">
-
             <form class="modal-content animate" action="/action_page.php">
               <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
               </div>
-
               <div class="container-log">
-                <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button class="popbut" type="submit">Login</button>
-                <input type="checkbox" checked="checked"> Remember me
+                <label><b>Ονομα Χρηστη</b></label>
+                <input type="text" name="username" required>
+                <label><b>Κωδικος</b></label>
+                <input type="password" name="password" required>
+                <button class="btn btn-success" type="submit">Εισοδος</button>
+                <input type="checkbox" checked="checked"> Να με θυμασαι.
               </div>
-
               <div class="container-log" style="background-color:#f1f1f1">
-                <button class="popbut-can" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                <button class="btn btn-danger" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Ακυρωση</button>
+                <span class="psw"> <a href="#">Ξεχασα τον κωδικο μου!</a></span>
               </div>
             </form>
           </div>
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-          <button type="button" class="btn btn-primary">Ελληνικά</button>
-          <div class="btn-group" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-
-            </button>
-            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
-              <a class="dropdown-item" href="#">English</a>
-              <a class="dropdown-item" href="#">Deutsch</a>
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn btn-primary">Ελληνικά</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              </button>
+              <div class="dropdown-menu mydr" aria-labelledby="btnGroupDrop1" x-placement="bottom-start">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Deutsch</a>
+              </div>
             </div>
           </div>
-        </div>
-        <br/>
-        <font size="2"><a href="singup.html">Δεν έχω λογαριασμό</a></font>
+          <br/>
+          <font size="2"><a href="singup.html">Δεν έχω λογαριασμό</a></font>
         </div>
         <!-- Button to open the modal login form -->
-
-       <!--  <div class="upLogIn col-4">
-        <table style="width:100%">
-        <tr>
-          <th>Όνομα χρήστη</th>
-          <th>Κωδικός</th>
-        </tr>
-        <tr>
-          <th ><input type="text" class="form-control" id="username" style="height:15px;"></th>
-          <th ><input type="password" class="form-control" id="password" style="height:15px;"></th>
-        </tr>
-        </table>
-        <font size="2"><a href="pages/404.html">Δεν έχω λογαριασμό</a></font>
-        <div class="logButton" style="text-align:center;">
-          <button type="submit" class="btn btn-success" style="height: 25px; width: 80px;">Είσοδος</button>
-        </div>
-        </div> -->
+        <!--  <div class="upLogIn col-4">
+          <table style="width:100%">
+          <tr>
+            <th>Όνομα χρήστη</th>
+            <th>Κωδικός</th>
+          </tr>
+          <tr>
+            <th ><input type="text" class="form-control" id="username" style="height:15px;"></th>
+            <th ><input type="password" class="form-control" id="password" style="height:15px;"></th>
+          </tr>
+          </table>
+          <font size="2"><a href="pages/404.html">Δεν έχω λογαριασμό</a></font>
+          <div class="logButton" style="text-align:center;">
+            <button type="submit" class="btn btn-success" style="height: 25px; width: 80px;">Είσοδος</button>
+          </div>
+          </div> -->
       </div>
     </div>
-
 
     <div class="navbar1">
       <!-- /<div class="col-md-12"> -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-12" style="position: sticky;">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Υπηρεσίες</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Επικοινωνία</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Βοήθεια</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Αναζήτηση">
-          <button class="btn btn-info my-2 my-sm-0" type="submit">Αναζήτηση</button>
-        </form>
-      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Υπηρεσίες</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Επικοινωνία</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Βοήθεια</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Αναζήτηση">
+            <button class="btn btn-info my-2 my-sm-0" type="submit">Αναζήτηση</button>
+          </form>
+        </div>
       </nav>
     </div>
-  <!-- </div> -->
-
+    <!-- </div> -->
     <!-- Page Content -->
     <div class="container" style="margin-top: 50px;" >
-
       <!-- Jumbotron Header -->
       <!--<header class="jumbotron my-4">
         <h1 class="display-3">A Warm Welcome!</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
         <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
-      </header>-->
-
+        </header>-->
       <!-- Page Features -->
       <div class="row text-center">
-
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
             <img class="card-img-top" src="http://placehold.it/500x500" alt="">
@@ -150,7 +130,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
             <img class="card-img-top" src="http://placehold.it/500x500" alt="">
@@ -159,7 +138,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
             <img class="card-img-top" src="http://placehold.it/500x500" alt="">
@@ -168,7 +146,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
             <img class="card-img-top" src="http://placehold.it/500x500" alt="">
@@ -177,13 +154,11 @@
             </div>
           </div>
         </div>
-
       </div>
       <!-- /.row -->
-
     </div>
-    <!-- /.container -->
 
+    <!-- /.container -->
     <div class="news" style="margin-left:100px; ">
       <div class="container">
         <div class="row">
@@ -191,12 +166,12 @@
             <div class="card bg-light mb-3">
               <div class="card-header">
                 <!-- 4380 css -->
-              <h4>Ανακοινώσεις</h4>
+                <h4>Ανακοινώσεις</h4>
               </div>
               <div class="card-body">
                 <div class="list-group">
                   <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">
-                    Cras justo odio
+                  Cras justo odio
                   </a>
                   <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Dapibus ac facilisis in
                   </a>
@@ -210,17 +185,17 @@
           <div class="col-xl-3">
             <div class="card bg-light mb-3">
               <div class="card-header">
-              <h4>Ανακοινώσεις</h4>
+                <h4>Ανακοινώσεις</h4>
               </div>
               <div class="card-body">
                 <div class="list-group">
-                    <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">
-                      Cras justo odio
-                    </a>
-                    <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Dapibus ac facilisis in
-                    </a>
-                    <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Morbi leo risus
-                    </a>
+                  <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">
+                  Cras justo odio
+                  </a>
+                  <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Dapibus ac facilisis in
+                  </a>
+                  <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Morbi leo risus
+                  </a>
                 </div>
               </div>
             </div>
@@ -229,14 +204,13 @@
           <div class="col-xl-3">
             <div class="card bg-light mb-3">
               <div class="card-header">
-              <h4>Ανακοινώσεις</h4>
+                <h4>Ανακοινώσεις</h4>
               </div>
               <!-- 4352 -->
               <div class="card-body">
-
                 <div class="list-group">
                   <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">
-                    Cras justo odio
+                  Cras justo odio
                   </a>
                   <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Dapibus ac facilisis in
                   </a>
@@ -247,53 +221,45 @@
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </div>
 
-
-
     <!-- Footer -->
-    <footer  style="width: 100%; background-color: black;">
+    <footer >
       <div class="container">
         <div class="row">
-        <div class="col-1">
-          I.K.A
+          <div class="col-1">
+            I.K.A
+          </div>
+          <div class="col-3">
+            Τηλέφωνο: 2101234567
+          </div>
+          <div class="col-2">
+            FAX: 2103456789
+          </div>
+          <div class="col-3">
+            E-MAIL: ika[@]ika.gr
+          </div>
+          <div class="col-3">
+            Copyright &copy; 2017 ΙΚΑ-ΕΤΑΜ
+          </div>
         </div>
-        <div class="col-3">
-          Τηλέφωνο: 2101234567
-        </div>
-        <div class="col-2">
-          FAX: 2103456789
-        </div>
-        <div class="col-3">
-          E-MAIL: ika[@]ika.gr
-        </div>
-        <div class="col-3">
-          Copyright &copy; 2017 ΙΚΑ-ΕΤΑΜ
-        </div>
-      </div>
       </div>
       <!-- /.container -->
     </footer>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
     <script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-
+      // Get the modal
+      var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+    </script>
   </body>
-
 </html>
