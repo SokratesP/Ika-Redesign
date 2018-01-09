@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -15,211 +15,176 @@
     <link rel="stylesheet" type="text/css" href="css/singup.css">
     <!--<link rel="stylesheet" type="text/css" href="css/langDropDown.css">-->
     <!--<link href="css/heroic-features.css" rel="stylesheet">-->
-</head>
+  </head>
 
-<body>
+  <body>
+
     <div class="up">
-        <div class="row">
-            <div class="upImg col-4" style="padding-right: 10px;">
-                <img src="images/logo.png" width="186" height="70">
-            </div>
-            <div class="upTitle col-6">
-                <h1>I.K.A.</h1>
-            </div>
+      <div class="row">
+        <div class="upImg col-4" style="padding-right: 10px;">
+          <a href="index.html">
+          <img src="images/logo.png" width="186" height="70">
+          </a>
         </div>
-    </div>
-    <!--  <div class="upLogIn col-2">
-      <button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" >Είσοδος</button>
-
-        <div id="id01" class="modal">
-
-          <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <img src="img_avatar2.png" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="container-log">
-              <label><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-
-              <label><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-
-              <button class="popbut" type="submit">Login</button>
-              <input type="checkbox" checked="checked"> Remember me
-            </div>
-
-            <div class="container-log" style="background-color:#f1f1f1">
-              <button class="popbut-can" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-          </form>
-        </div>
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-primary">Ελληνικά</button>
-        <div class="btn-group" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-
-          </button>
-          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
-            <a class="dropdown-item" href="#">English</a>
-            <a class="dropdown-item" href="#">Deutsch</a>
-          </div>
+        <div class="upTitle col-6">
+          <h1>I.K.A.</h1>
         </div>
       </div>
-      <br/>
-      <font size="2"><a href="singup.html">Δεν έχω λογαριασμό</a></font>
-      </div> -->
+    </div>
+
     <div class="navbar1">
-        <!-- /<div class="col-md-12"> -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-12" style="position: sticky;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/404.html">Υπηρεσίες</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Επικοινωνία</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Βοήθεια</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Αναζήτηση">
-                    <button class="btn btn-info my-2 my-sm-0" type="submit">Αναζήτηση</button>
-                </form>
-            </div>
-        </nav>
-    </div>
-    <div class="container">
-        <h3 class="breadcrump">Δημιουργια Λογαρισμου</h3>
-    </div>
-    <div class="container">
-        <div class="row">
-            <form class="form-horizontal col-md-6">
-                <fieldset>
-                    <!-- Text input-->
-                    <div class="form-group-si row">
-                        <label class="col-md-4 control-label" for="textinput">Ονομα</label>
-                        <div class="col-md-6">
-                            <input id="Name" name="Name" type="text" class="form-control-si input-md-si" required="">
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group-si row">
-                        <label class="col-md-4 control-label" for="textinput">Επωνυμο</label>
-                        <div class="col-md-6">
-                            <input id="Surename" name="Surname" type="text" class="form-control-si input-md-si" required="">
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group-si row">
-                        <label class="col-md-4 control-label" for="textinput">Α.Φ.Μ</label>
-                        <div class="col-md-6">
-                            <input id="afm" name="afm" type="text" placeholder="1234567890" class="form-control-si input-md-si" required="">
-                            <span class="help-block">Αριθμος Φορολογικου Μητρωου</span>
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group-si row">
-                        <label class="col-md-4 control-label" for="textinput">Α.Μ.Κ.Α</label>
-                        <div class="col-md-6">
-                            <input id="amka" name="amka" type="text" class="form-control-si input-md-si" required="">
-                            <span class="help-block">Αριθμος Μητρωου Κοινωνικης Ασφαλισης</span>
-                        </div>
-                    </div>
-                    <!-- Multiple Radios -->
-                    <div class="form-group-si row">
-                        <label class="col-md-4 control-label" for="radios">Ιδιοτητα</label>
-                        <div class="col-md-6">
-                            <div class="radio">
-                                <label for="radios-0">
-                                    <input type="radio" name="radios" id="pensioner" value="1"> Συνταξιουχος
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label for="radios-1">
-                                    <input type="radio" name="radios" id="insured" value="2"> Ασφαλισμενος
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label for="radios-2">
-                                    <input type="radio" name="radios" id="employer" value="3"> Εργοδοτης
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                              </fieldset>
-        </form>
-        <form class="form-horizontal col-md-6">
-          <fieldset>
-                    
-                        <!-- Text input-->
-                        <div class="form-group-si row test">
-                            <label class="col-md-4 control-label" for="textinput">Ονομα Χρηστη</label>
-                            <div class="col-md-6">
-                                <input id="username" name="username" type="text" class="form-control-si input-md-si" required="">
-                            </div>
-                        </div>
-                        <!-- Password input-->
-                        <div class="form-group-si row">
-                            <label class="col-md-4 control-label" for="passwordinput">Κωδικος</label>
-                            <div class="col-md-6">
-                                <input id="password" name="password" type="password" class="form-control-si input-md-si" required="">
-                                <span class="help-block">-Τουλαχιστον 8 χαρακτηρες <br> -Ενας αριθμος</span>
-                            </div>
-                        </div>
-                        <!-- Password input-->
-                        <div class="form-group-si row">
-                            <label class="col-md-4 control-label" for="passwordinput">Επαληθευση Κωδικου </label>
-                            <div class="col-md-6">
-                                <input id="password-again" name="password-again" type="password" class="form-control-si input-md-si" required="">
-                            </div>
-                        </div>
-                        <!-- Text input-->
-                        <div class="form-group-si row">
-                            <label class="col-md-4 control-label" for="textinput">E-Mail</label>
-                            <div class="col-md-6">
-                                <input id="email" name="email" type="text" class="form-control-si input-md-si" required="">
-                            </div>
-                        </div>
-                    
-                </fieldset>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+      <!-- /<div class="col-md-12"> -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-12" style="position: sticky;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/404.html">Υπηρεσίες</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Επικοινωνία</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Βοήθεια</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Αναζήτηση">
+            <button class="btn btn-info my-2 my-sm-0" type="submit">Αναζήτηση</button>
+          </form>
         </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <h3 class="breadcrump">Δημιουργια Λογαρισμου</h3>
+    </div>
+
+    <div class="container">
+    <div class="row">
+      <form class="form-horizontal">
+        <fieldset>
+          <!-- Text input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="name">Ονομα</label>  
+            <div class="col-md-6">
+              <input id="name" name="name" type="text" class="form-control-si input-md" required="">
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="surname">Επωνυμο</label>  
+            <div class="col-md-6">
+              <input id="surname" name="surname" type="text" class="form-control-si input-md" required="">
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="afm">Α.Φ.Μ.</label>  
+            <div class="col-md-6">
+              <input id="afm" name="afm" type="text" placeholder="1234567890" class="form-control-si input-md" required="">
+              <span class="help-block">Αριθμος Φορολογικου Μητρωου</span>  
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="amka">Α.Μ.Κ.Α.</label>  
+            <div class="col-md-6">
+              <input id="amka" name="amka" type="text" placeholder="" class="form-control-si input-md" required="">
+              <span class="help-block">Αριθμος Μητρωου Κοινωνικης Ασφαλισης</span>  
+            </div>
+          </div>
+          <!-- Multiple Radios -->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="property">Ιδιοτητα</label>
+            <div class="col-md-6">
+              <div class="radio">
+                <label for="property-0">
+                <input type="radio" name="property" id="property-0" value="1" checked="checked">
+                Συνταξιουχος
+                </label>
+              </div>
+              <div class="radio">
+                <label for="property-1">
+                <input type="radio" name="property" id="property-1" value="2">
+                Ασφαλισμενος
+                </label>
+              </div>
+              <div class="radio">
+                <label for="property-2">
+                <input type="radio" name="property" id="property-2" value="3">
+                Εργοδοτης
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="username">Ονομα Χρηστη</label>  
+            <div class="col-md-6">
+              <input id="username" name="username" type="text" class="form-control-si input-md" required="">
+              <span class="help-block">Το ονομα που θα χρησιμοποειτε για την  σελιδα</span>  
+            </div>
+          </div>
+          <!-- Password input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="password">Κωδικος</label>
+            <div class="col-md-6">
+              <input id="password" name="password" type="password" class="form-control-si input-md" required="">
+            </div>
+          </div>
+          <!-- Password input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="passwordagain">Επαληθευση Κωδικου</label>
+            <div class="col-md-6">
+              <input id="passwordagain" name="passwordagain" type="password" class="form-control-si input-md" required="">
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="email">E-Mail</label>  
+            <div class="col-md-6">
+              <input id="email" name="email" type="text" class="form-control-si input-md" required="">
+            </div>
+          </div>
+          <!-- Button (Double) -->
+          <div class="form-group-si row">
+            <label class="col-md-4 control-label" for="button1id"></label>
+            <div class="col-md-8">
+              <a href="index.html" class="btn btn-danger">Ακυρωση</a>
+              <button id="button2id" name="button2id" class="btn btn-success">Υποβολη</button>
+            </div>
+        </fieldset>
+      </form>
+      </div>
     </div>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-1">
-                    I.K.A
-                </div>
-                <div class="col-3">
-                    Τηλέφωνο: 2101234567
-                </div>
-                <div class="col-2">
-                    FAX: 2103456789
-                </div>
-                <div class="col-3">
-                    E-MAIL: ika[@]ika.gr
-                </div>
-                <div class="col-3">
-                    Copyright &copy; 2017 ΙΚΑ-ΕΤΑΜ
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            I.K.A
+          </div>
+          <div class="col-3">
+            Τηλέφωνο: 2101234567
+          </div>
+          <div class="col-2">
+            FAX: 2103456789
+          </div>
+          <div class="col-3">
+            E-MAIL: ika[@]ika.gr
+          </div>
+          <div class="col-3">
+            Copyright &copy; 2017 ΙΚΑ-ΕΤΑΜ
+          </div>
         </div>
-        <!-- /.container -->
-    </footer>
-</body>
+      </div>
 
+    </footer>
+  </body>
 </html>

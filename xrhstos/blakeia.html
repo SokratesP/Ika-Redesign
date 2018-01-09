@@ -99,3 +99,138 @@
 	</div>
 </body>
 </html>
+
+<form class="form-horizontal col-md-6">
+                <fieldset>
+                    <!-- Text input-->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="textinput">Ονομα</label>
+                        <div class="col-md-6">
+                            <input id="Name" name="Name" type="text" class="form-control-si input-md-si" required="">
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="textinput">Επωνυμο</label>
+                        <div class="col-md-6">
+                            <input id="Surename" name="Surname" type="text" class="form-control-si input-md-si" required="">
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="textinput">Α.Φ.Μ</label>
+                        <div class="col-md-6">
+                            <input id="afm" name="afm" type="text" placeholder="1234567890" class="form-control-si input-md-si" required="">
+                            <span class="help-block">Αριθμος Φορολογικου Μητρωου</span>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="textinput">Α.Μ.Κ.Α</label>
+                        <div class="col-md-6">
+                            <input id="amka" name="amka" type="text" class="form-control-si input-md-si" required="">
+                            <span class="help-block">Αριθμος Μητρωου Κοινωνικης Ασφαλισης</span>
+                        </div>
+                    </div>
+                    <!-- Multiple Radios -->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="radios">Ιδιοτητα</label>
+                        <div class="col-md-6">
+                            <div class="radio">
+                                <label for="radios-0">
+                                    <input type="radio" name="radios" id="pensioner" value="1"> Συνταξιουχος
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="radios-1">
+                                    <input type="radio" name="radios" id="insured" value="2"> Ασφαλισμενος
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="radios-2">
+                                    <input type="radio" name="radios" id="employer" value="3"> Εργοδοτης
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+              <!-- </form> -->
+            <div class="form-horizontal col-md-6">
+                <fieldset>
+                    <!-- Text input -->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="textinput">Ονομα Χρηστη</label>
+                        <div class="col-md-6">
+                            <input id="username" name="username" type="text" class="form-control-si input-md-si" required="">
+                        </div>
+                    </div>
+                    <!-- Password input -->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="passwordinput">Κωδικος</label>
+                        <div class="col-md-6">
+                            <input id="password" name="password" type="password" class="form-control-si input-md-si" required="">
+                            <span class="help-block">-Τουλαχιστον 8 χαρακτηρες <br> -Ενας αριθμος</span>
+                        </div>
+                    </div>
+                    <!--  Password input -->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="passwordinput">Επαληθευση Κωδικου </label>
+                        <div class="col-md-6">
+                            <input id="password-again" name="password-again" type="password" class="form-control-si input-md-si" required="">
+                        </div>
+                    </div>
+                    <!-- Text input -->
+                    <div class="form-group-si row">
+                        <label class="col-md-4 control-label" for="textinput">E-Mail</label>
+                        <div class="col-md-6">
+                            <input id="email" name="email" type="text" class="form-control-si input-md-si" required="">
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+
+                <!--  <div class="upLogIn col-2">
+      <button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" >Είσοδος</button>
+
+        <div id="id01" class="modal">
+
+          <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container-log">
+              <label><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button class="popbut" type="submit">Login</button>
+              <input type="checkbox" checked="checked"> Remember me
+            </div>
+
+            <div class="container-log" style="background-color:#f1f1f1">
+              <button class="popbut-can" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <button type="button" class="btn btn-primary">Ελληνικά</button>
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+          </button>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Deutsch</a>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <font size="2"><a href="singup.html">Δεν έχω λογαριασμό</a></font>
+      </div> -->

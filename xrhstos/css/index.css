@@ -202,12 +202,27 @@ div.bottom
 }
 
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    overflow: auto;
+    margin: 0 0 10px; /* bottom = footer height */
+}
+
 footer {
-    background-color: orange;
+    background-color: black;
+    color: white;
     position: absolute;
     left: 0;
     bottom: 0;
+    height: 25px;
     width: 100%;
-    overflow:hidden;
-    color: white;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
