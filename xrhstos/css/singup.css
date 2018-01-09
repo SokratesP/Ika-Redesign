@@ -11,17 +11,39 @@
 
 .control-label{
 	font-weight: 600;
+	height: 90px;
+  line-height: 90px;
+  text-align: center;
 }
 
 .form-control-si{
 	border-radius: 3px;
 }
 
+.test{
+	align-content: center;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+	overflow: auto;
+    margin: 0 0 10px; /* bottom = footer height */
+}
+
 footer {
-    background-color: orange;
+	background-color: black;
     position: absolute;
     left: 0;
     bottom: 0;
+    height: 25px;
     width: 100%;
-    overflow:hidden;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
