@@ -27,11 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $validation_errors[] = "Το Επώνυμο δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
 
     // afm is required and cannot exceed 9 characters in length
-    if (!empty($_POST["afm"]) && mb_strlen($_POST["afm"]) > 9)
+    if (!empty($_POST["afm"]) && mb_strlen($_POST["afm"]) > 10)
         $validation_errors[] = "Το ΑΦΜ δεν πρέπει να υπερβαίνει τους 9 χαρακτήρες.";
 
     // amka is required and cannot exceed 11 characters in length
-    if (!empty($_POST["amka"]) && mb_strlen($_POST["amka"]) > 11)
+    if (!empty($_POST["amka"]) && mb_strlen($_POST["amka"]) > 12)
         $validation_errors[] = "Το ΑΜΚΑ δεν πρέπει να υπερβαίνει τους 11 χαρακτήρες.";
 
     // user_type is required and must be equal to one of 3 predefined values (syntaksiouxos, asfalismenos, ergodotis)
