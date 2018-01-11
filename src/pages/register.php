@@ -1,5 +1,5 @@
 <?php
-$page_name = "register";
+$page_name = "Εγγραφή";
 include("../inc/config.php");
 
 // If the user is logged in, there is no reason for him to register again

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Ικα Αρχικη</title>
+    <title><?php echo $page_name;?></title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/test.css" type="text/css"/>
@@ -38,7 +38,7 @@
         <div class="upLogIn col-2">
           <?php if ($user != null): ?>
           <div class="logedin">
-            <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='404.html'> ". ucfirst($user['username'])."</a>"?>
+            <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='profile.php'> ". ucfirst($user['username'])."</a>"?>
             <!-- <div class="butlog" style="margin-left: 10px;"> -->
             <a class="btn btn-success" style="margin-left: 1.875em;  " href="logout.php">Έξοδος</a>
             <!-- </div> -->

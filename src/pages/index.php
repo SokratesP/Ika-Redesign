@@ -1,5 +1,5 @@
 <?php
-   $page_name = "index";
+   $page_name = "Ικα Αρχική";
    include("../inc/header.php");
 ?>
 
