@@ -84,4 +84,4 @@ require("../inc/header.php");
         </div>
     </div>
 
-<?php require("inc/footer.php"); ?>
+<?php require("../inc/footer.php"); ?>

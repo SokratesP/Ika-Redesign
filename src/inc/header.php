@@ -24,7 +24,6 @@
 <div class="up">
     <div class="row">
         <div class="upImg col-4" style="padding-right: 10px;">
-            <!-- <img src="../images/logo.png" width="186" height="70"> -->
             <a href="index.php">
                 <img src="../images/logo.png" width="186" height="70">
             </a>
@@ -62,8 +61,6 @@
                         </div>
                     </form>
                 </div>
-            <?php endif; ?>
-
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <button type="button" class="btn btn-primary">Ελληνικά</button>
                 <div class="btn-group" role="group">
@@ -76,6 +73,8 @@
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
+            
             <?php if ($user == null): ?>
                 <br/>
                 <font size="2"><a href="register.php">Δεν έχω λογαριασμό</a></font>
