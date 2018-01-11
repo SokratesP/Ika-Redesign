@@ -121,8 +121,8 @@ span.psw {
 div.up 
 {
 	background-color: #21366A;
-    top: 0px;
-    left: 0px;
+    top: 0em;
+    left: 0em;
     height: auto;
     width: 100%;
 }
@@ -138,8 +138,8 @@ div.upTitle
 {
 	/*position: absolute;*/
 	color: white;
-	padding-left: 150px;
-	padding-top: 8px;
+	padding-left: 9.375em;
+	padding-top: 0.5em;
 	/*top: 30px;
     left: 400px;*/
 	/*width: auto;
@@ -149,16 +149,16 @@ div.upLogIn
 {
 	/*position: absolute;*/
 	
-	top: 0px;
-    right: 25px;
-	padding-top: 15px;
+	top: 0em;
+    right: 1.563em;
+	padding-top: 0.938em;
 	/*width: auto;
 	height: auto;*/
 }
 div.langdrd 
 {
 	position: absolute;
-    right: 3px;
+    right: 0.188em;
 	display: inline-block;
 	
 	/*display:table-cell;
@@ -171,16 +171,16 @@ div.langdrd
 div.navbar1 
 {
   position: sticky;
-  top: 0px;
-  left: 0px;
-  height: 100px;
+  top: 0em;
+  left: 0em;
+  height: 6.250em;
   width: 100%;
   z-index: 2000;
 }
 
 .nav-item{
-	padding-left:40px;
-	font-size: 1.5em;
+	padding-left: 2.500em;
+	font-size: 24px;
 }
 div.body
 {
@@ -192,8 +192,8 @@ div.bottom
 	position: absolute;
     background-color: #cfd1d0; /* Grey */
     border: none;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0em;
+    left: 0em;
     height: auto;
     width: 100%;
     align-self: center;
@@ -225,4 +225,9 @@ footer {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+.greetings{
+    align-self: center;
+ 
 }

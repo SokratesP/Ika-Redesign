@@ -4,7 +4,12 @@ include("../inc/header.php");
 ?>
 
     <!-- Page Content -->
-    <div class="container" style="margin-top: 50px;">
+    <div class="container greetings" style="margin-top: 1em;">
+            <h2 align="center">Kαλωσηρθατε στον ιστοχωρο του ΙΚΑ.</h2>
+            
+    </div>
+    <div class="container" style="margin-top: 2.2em;">
+        <h3 align="center">Διαλεξτε την ιδιοτητα σας.</h3>
         <!-- Jumbotron Header -->
         <!--<header class="jumbotron my-4">
           <h1 class="display-3">A Warm Welcome!</h1>

@@ -23,7 +23,7 @@
 <!-- Navigation -->
 <div class="up">
     <div class="row">
-        <div class="upImg col-4" style="padding-right: 10px;">
+        <div class="upImg col-4" style="padding-right: 0.625em;">
             <a href="index.php">
                 <img src="../images/logo.png" width="186" height="70">
             </a>
@@ -33,14 +33,14 @@
         </div>
         <div class="upLogIn col-2">
             <?php if ($user != null): ?>
-                <div class="logedin" >
-                    <?php echo "<a style='color: white; margin-right:15px; ' href='404.html'>". ucfirst($user['username'])."</a>"?>
-                    <a class="btn btn-success" href="logout.php">Έξοδος</a>
+                <div class="logedin">
+                    <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='404.html'> ". ucfirst($user['username'])."</a>"?>
+                    <!-- <div class="butlog" style="margin-left: 10px;"> -->
+                        <a class="btn btn-success" style="margin-left: 1.875em;  " href="logout.php">Έξοδος</a>
+                    <!-- </div> -->
                 </div>           
             <?php else: ?>
-                <div class="butlog" style="margin-left: 15px;">    
-                    <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'">Είσοδος</button>
-                </div>
+                <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'">Είσοδος</button>
                 <div id="id01" class="modal">
                     <form class="modal-content animate" action="login.php" method="POST">
                         <div class="imgcontainer">
@@ -113,16 +113,16 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item <?= $page_name == "index" ? "active" : "" ?>">
-                    <a class="nav-link" href="index.php">Αρχική</a>
+                    <a class="nav-link" href="../pages/index.php">Αρχική</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/404.html">Υπηρεσίες</a>
+                    <a class="nav-link" href="../pages/404.html">Υπηρεσίες</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/404.html">Επικοινωνία</a>
+                    <a class="nav-link" href="../pages/404.html">Επικοινωνία</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/404.html">Βοήθεια</a>
+                    <a class="nav-link" href="../pages/404.html">Βοήθεια</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
