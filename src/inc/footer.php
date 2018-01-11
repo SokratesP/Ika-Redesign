@@ -21,9 +21,12 @@
     </div>
     <!-- /.container -->
 </footer>
+
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
+
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <script>
     // Get the modal
     var modal = document.getElementById('id01');
@@ -34,6 +37,9 @@
             modal.style.display = "none";
         }
     }
+
 </script>
+
 </body>
+
 </html>
