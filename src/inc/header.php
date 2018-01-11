@@ -33,10 +33,14 @@
         </div>
         <div class="upLogIn col-2">
             <?php if ($user != null): ?>
-                <a class="btn btn-success" href="logout.php">Έξοδος</a>
+                <div class="logedin" >
+                    <?php echo "<a style='color: white; margin-right:15px; ' href='404.html'>". ucfirst($user['username'])."</a>"?>
+                    <a class="btn btn-success" href="logout.php">Έξοδος</a>
+                </div>           
             <?php else: ?>
-                <button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'">Είσοδος
-                </button>
+                <div class="butlog" style="margin-left: 15px;">    
+                    <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'">Είσοδος</button>
+                </div>
                 <div id="id01" class="modal">
                     <form class="modal-content animate" action="login.php" method="POST">
                         <div class="imgcontainer">
