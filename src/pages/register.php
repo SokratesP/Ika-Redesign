@@ -1,6 +1,6 @@
 <?php
 $page_name = "register";
-include("inc/config.php");
+include("../inc/config.php");
 
 // If the user is logged in, there is no reason for him to register again
 // Redirect to home page
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-include("inc/header.php");
+include("../inc/header.php");
 
 ?>
 
@@ -144,7 +144,7 @@ include("inc/header.php");
                         </div>
                         <!-- Text input-->
                         <div class="form-group-si row">
-                            <label class="col-md-4 control-label" for="afm">Α.Φ.Μ.</label>
+                            <label class="col-md-4 control-label" for="afm">Α.Φ.Μ. *</label>
                             <div class="col-md-6">
                                 <input id="afm" name="afm" type="text" placeholder="1234567890"
                                        class="form-control-si input-md">
@@ -153,7 +153,7 @@ include("inc/header.php");
                         </div>
                         <!-- Text input-->
                         <div class="form-group-si row">
-                            <label class="col-md-4 control-label" for="amka">Α.Μ.Κ.Α.</label>
+                            <label class="col-md-4 control-label" for="amka">Α.Μ.Κ.Α. *</label>
                             <div class="col-md-6">
                                 <input id="amka" name="amka" type="text" placeholder=""
                                        class="form-control-si input-md">
@@ -232,4 +232,4 @@ include("inc/header.php");
         </div>
     </div>
     <br><br>
-<?php include("inc/footer.php") ?>
+<?php include("../inc/footer.php") ?>

@@ -1,5 +1,5 @@
 <?php
-require("inc/config.php");
+require("../inc/config.php");
 
 // No user has logged in, no need to log out
 if ($user == null)

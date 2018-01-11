@@ -1,6 +1,6 @@
 <?php
 $page_name = "index";
-include("inc/header.php");
+include("../inc/header.php");
 ?>
 
     <!-- Page Content -->
@@ -17,7 +17,7 @@ include("inc/header.php");
                 <div class="card">
                     <img class="card-img-top" src="http://placehold.it/500x500" alt="">
                     <div class="card-footer">
-                        <a href="pages/404.html" class="btn btn-primary">Συνταξιούχος</a>
+                        <a href="404.html" class="btn btn-primary">Συνταξιούχος</a>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@ include("inc/header.php");
                 <div class="card">
                     <img class="card-img-top" src="http://placehold.it/500x500" alt="">
                     <div class="card-footer">
-                        <a href="pages/404.html" class="btn btn-primary">Ασφαλιζόμενος</a>
+                        <a href="404.html" class="btn btn-primary">Ασφαλιζόμενος</a>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ include("inc/header.php");
                 <div class="card">
                     <img class="card-img-top" src="http://placehold.it/500x500" alt="">
                     <div class="card-footer">
-                        <a href="pages/404.html" class="btn btn-primary">Εργοδότης</a>
+                        <a href="404.html" class="btn btn-primary">Εργοδότης</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@ include("inc/header.php");
                 <div class="card">
                     <img class="card-img-top" src="http://placehold.it/500x500" alt="">
                     <div class="card-footer">
-                        <a href="pages/404.html" class="btn btn-primary">Γενική Είσοδος</a>
+                        <a href="404.html" class="btn btn-primary">Γενική Είσοδος</a>
                     </div>
                 </div>
             </div>
@@ -61,13 +61,13 @@ include("inc/header.php");
                         </div>
                         <div class="card-body">
                             <div class="list-group">
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">
                                     Cras justo odio
                                 </a>
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Dapibus
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">Dapibus
                                     ac facilisis in
                                 </a>
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Morbi
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">Morbi
                                     leo risus
                                 </a>
                             </div>
@@ -82,13 +82,13 @@ include("inc/header.php");
                         </div>
                         <div class="card-body">
                             <div class="list-group">
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">
                                     Cras justo odio
                                 </a>
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Dapibus
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">Dapibus
                                     ac facilisis in
                                 </a>
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Morbi
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">Morbi
                                     leo risus
                                 </a>
                             </div>
@@ -104,13 +104,13 @@ include("inc/header.php");
                         <!-- 4352 -->
                         <div class="card-body">
                             <div class="list-group">
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">
                                     Cras justo odio
                                 </a>
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Dapibus
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">Dapibus
                                     ac facilisis in
                                 </a>
-                                <a href="pages/404.html" class="list-group-item list-group-item-action" target="blank">Morbi
+                                <a href="404.html" class="list-group-item list-group-item-action" target="blank">Morbi
                                     leo risus
                                 </a>
                             </div>
@@ -121,4 +121,4 @@ include("inc/header.php");
         </div>
     </div>
 
-<?php include("inc/footer.php") ?>
+<?php include("../inc/footer.php") ?>

@@ -1,5 +1,5 @@
 <?php
-require("inc/config.php");
+require("../inc/config.php");
 
 // User has logged in, no need to log in again.
 if ($user != null)
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php
 $page_name = "login";
-require("inc/header.php");
+require("../inc/header.php");
 ?>
 
     <div class="container">

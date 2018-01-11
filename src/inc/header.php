@@ -11,10 +11,10 @@
     <title>Ικα Αρχικη</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/test.css" type="text/css"/>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="css/test.css" type="text/css"/>
-    <link rel="stylesheet" href="css/index.css" type="text/css"/>
-    <!--     <link rel="stylesheet" type="text/css" href="css/langDropDown.css"> -->
+    <link rel="stylesheet" href="../css/index.css" type="text/css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="css/langDropDown.css"> -->
     <!-- <link href="css/heroic-features.css" rel="stylesheet"> -->
 </head>
 
@@ -24,7 +24,10 @@
 <div class="up">
     <div class="row">
         <div class="upImg col-4" style="padding-right: 10px;">
-            <img src="images/logo.png" width="186" height="70">
+            <!-- <img src="../images/logo.png" width="186" height="70"> -->
+            <a href="index.php">
+                <img src="../images/logo.png" width="186" height="70">
+            </a>
         </div>
         <div class="upTitle col-6">
             <h1>I.K.A.</h1>
