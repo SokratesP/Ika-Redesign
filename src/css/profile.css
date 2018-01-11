@@ -1,0 +1,12 @@
+.words{
+	color: black;
+	font-size: 1.2em;
+}
+
+a:hover{
+	color: red;
+}
+
+.inner{
+	text-decoration: underline;
+}

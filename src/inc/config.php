@@ -8,7 +8,7 @@ $db_name = "sdi1400166";    // Database name
 
 // Initialize a connection to the database
 $con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-
+mysqli_set_charset($con,"utf8");
 // Start a new session if one doesn't exist
 if (!isset($_SESSION))
     session_start();
