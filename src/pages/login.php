@@ -30,7 +30,7 @@
               $validation_errors[] = "Τα στοιχεία που εισάγατε δεν είναι έγκυρα. Παρακαλούμε προσπαθήστε ξανά.";
           } else {
               $_SESSION["user_id"] = $user["id"];
-              header("Location: index.php");
+              header("Location: perhome.php");
           }
       }
   }
@@ -72,7 +72,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-4 col-sm-8">
-            <button type="submit" class="btn btn-primary">Σύνδεση</button>
+            <button type="submit" class="btn btn-success">Σύνδεση</button>
           </div>
         </div>
       </form>

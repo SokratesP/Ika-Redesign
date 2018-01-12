@@ -29,12 +29,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // afm is required and cannot exceed 9 characters in length
     if (empty($_POST["afm"]))
         $validation_errors[] = "Το ΑΦΜ είναι υποχρεωτικό.";
+    elseif (!is_numeric($_POST["afm"]))
+        $validation_errors[] = "Το ΑΦΜ πρέπει να αποτελείται μόνο απο νούμερα.";
     elseif (mb_strlen($_POST["afm"]) > 10) 
         $validation_errors[] = "Το ΑΦΜ δεν πρέπει να υπερβαίνει τους 9 χαρακτήρες.";     
 
     // amka is required and cannot exceed 11 characters in length
     if (empty($_POST["amka"]))
         $validation_errors[] = "Το ΑΜΚΑ είναι υποχρεωτικό.";
+    elseif (!is_numeric($_POST["amka"]))
+        $validation_errors[] = "Το ΑΜΚΑ πρέπει να αποτελείται μόνο απο νούμερα.";
     elseif(mb_strlen($_POST["amka"]) > 12)
         $validation_errors[] = "Το ΑΜΚΑ δεν πρέπει να υπερβαίνει τους 11 χαρακτήρες.";
 

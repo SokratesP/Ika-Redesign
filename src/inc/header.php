@@ -12,11 +12,13 @@
     <title><?php echo $page_name;?></title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/test.css" type="text/css"/>
+    
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css"/>
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="../css/index.css" type="text/css"/>
     <!-- <link rel="stylesheet" type="text/css" href="css/langDropDown.css"> -->
     <!-- <link href="css/heroic-features.css" rel="stylesheet"> -->
+    <link rel="icon" href="../images/flower.ico">
   
   </head>
   
@@ -39,9 +41,7 @@
           <?php if ($user != null): ?>
           <div class="logedin">
             <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='profile.php'> ". ucfirst($user['username'])."</a>"?>
-            <!-- <div class="butlog" style="margin-left: 10px;"> -->
-            <a class="btn btn-success" style="margin-left: 1.875em;  " href="logout.php">Έξοδος</a>
-            <!-- </div> -->
+            <a class="btn btn-danger" style="margin-left: 1.875em;  " href="logout.php">Έξοδος</a>
           </div>
           
           <?php else: ?>
@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="navbar1">
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary col-md-12" style="position: sticky;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
@@ -120,3 +120,4 @@
       </nav>
     </div>
     
+

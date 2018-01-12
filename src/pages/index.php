@@ -14,9 +14,9 @@
    <div class="row text-center">
       <div class="col-lg-3 col-md-6 mb-4">
          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x500" alt="">
+            <img class="card-img-top" src="../images/pensioner.jpg" style="height: 15.813em;" alt="">
             <div class="card-footer">
-               <a href="404.html" class="btn btn-primary">Συνταξιούχος</a>
+               <a href="perhome.php" class="btn btn-primary">Συνταξιούχος</a>
             </div>
          </div>
       </div>
@@ -30,7 +30,7 @@
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x500" alt="">
+            <img class="card-img-top" src="../images/employer.jpg" style="height: 15.813em;" alt="">
             <div class="card-footer">
                <a href="404.html" class="btn btn-primary">Εργοδότης</a>
             </div>
@@ -55,7 +55,7 @@
             <div class="card bg-light mb-3">
                <div class="card-header">
                   <!-- 4380 css -->
-                  <h4>Ανακοινώσεις</h4>
+                  <h4 align="center">Ανακοινώσεις</h4>
                </div>
                <div class="card-body">
                   <div class="list-group">
@@ -76,7 +76,7 @@
          <div class="col-xl-3">
             <div class="card bg-light mb-3">
                <div class="card-header">
-                  <h4>Ανακοινώσεις</h4>
+                  <h4>Ενημερώσεις</h4>
                </div>
                <div class="card-body">
                   <div class="list-group">
@@ -97,7 +97,7 @@
          <div class="col-xl-3">
             <div class="card bg-light mb-3">
                <div class="card-header">
-                  <h4>Ανακοινώσεις</h4>
+                  <h4>Εγκύκλιοι</h4>
                </div>
                <!-- 4352 -->
                <div class="card-body">

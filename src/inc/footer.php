@@ -6,7 +6,7 @@
                 I.K.A
             </div>
             <div class="col-3">
-                Τηλέφωνο: 2101234567
+                <a href="tel:1234567">Τηλέφωνο: 2101234567</a>
             </div>
             <div class="col-2">
                 FAX: 2103456789
@@ -23,9 +23,9 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
 
 <script>
     // Get the modal

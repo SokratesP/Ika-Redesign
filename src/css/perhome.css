@@ -1,0 +1,22 @@
+.link:hover{
+	text-decoration : none;
+}
+
+.pagetitle{
+	margin-top: 0.8em;
+	padding-bottom: 1.2em;
+}
+
+.bottomrow{
+	margin-top: 1.2em;
+}
+
+.myclass{
+	min-height: 5.000em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.mycardclass{
+	min-height: 4.375em;
+}
