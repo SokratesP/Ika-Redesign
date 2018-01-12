@@ -12,7 +12,7 @@
 	<h2 align="center" class="pagetitle">Ηλεκτρονικές Υπηρεσίες</h2>
 </div>
 
-<?php if ($user['user_type'] == "syntaksiouxos" or $_SESSION['category'] =="syntaksiouxos" ): ?>
+<?php if ($user['user_type'] == "syntaksiouxos"/* or $_SESSION['category'] =="syntaksiouxos"*/ ): ?>
 	
 <div class="container">
 	<div class="row">
@@ -123,7 +123,7 @@
 	</div>
 </div>
 
-<?php elseif ($user['user_type'] == "asfalismenos" or $_SESSION['category'] =="asfalismenos"): ?>
+<?php elseif ($user['user_type'] == "asfalismenos" /*οr $_SESSION['category'] =="asfalismenos"*/): ?>
 
 <div class="container">
 	<div class="row">
@@ -234,7 +234,7 @@
 	</div>
 </div>
 
-<?php elseif ($user['user_type'] == "ergodotis" or $_SESSION['category'] =="ergodotis"): ?>
+<?php elseif ($user['user_type'] == "ergodotis" /*or $_SESSION['category'] =="ergodotis"*/): ?>
 
 <div class="container">
 	<div class="row">

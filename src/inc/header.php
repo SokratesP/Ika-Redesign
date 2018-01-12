@@ -40,7 +40,7 @@
         <div class="upLogIn col-2">
           <?php if ($user != null): ?>
           <div class="logedin">
-            <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='profile.php'> ". ucfirst($user['username'])."</a>"?>
+            <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='profile.php'> ". ucfirst($user['first_name'])."</a>"?>
             <a class="btn btn-danger" style="margin-left: 1.875em;  " href="logout.php">Έξοδος</a>
           </div>
           
