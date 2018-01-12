@@ -103,7 +103,7 @@
               <a class="nav-link" href="../pages/index.php">Αρχική</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/perhome.php">Υπηρεσίες</a>
+              <a class="nav-link" href="../pages/perhome.php?cat=gen">Υπηρεσίες</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../pages/404.html">Επικοινωνία</a>
