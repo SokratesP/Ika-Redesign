@@ -8,4 +8,7 @@ if ($user == null)
 $user = null;
 
 session_destroy();
+
+/*session_unset();*/
 header("Location: index.php");
+?>

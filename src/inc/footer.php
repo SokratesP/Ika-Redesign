@@ -6,16 +6,20 @@
                 I.K.A
             </div>
             <div class="col-3">
-                <a href="tel:1234567">Τηλέφωνο: 2101234567</a>
+                Τηλέφωνο: 
+                <a href="tel:1234567">2101234567</a>
             </div>
             <div class="col-2">
-                FAX: 2103456789
+                FAX: 
+                <a href="fax:1234567">2103456789</a>
+                
             </div>
             <div class="col-3">
-                E-MAIL: ika[@]ika.gr
+                E-MAIL: 
+                <a href="mailto:ika@ika.gr">ika[@]ika.gr</a>
             </div>
             <div class="col-3">
-                Copyright &copy; 2017 ΙΚΑ-ΕΤΑΜ
+                Copyright &copy; 2018 ΙΚΑ-ΕΤΑΜ
             </div>
         </div>
     </div>
