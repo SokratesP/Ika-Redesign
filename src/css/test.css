@@ -1,0 +1,14 @@
+.sub-entry {
+    width: 50%;
+    float: left;
+}
+
+.button {
+    text-align: center;
+    padding-top: 20px;
+    clear: both;
+}
+
+.form-validation{
+	align-self: center;
+}

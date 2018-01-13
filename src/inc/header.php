@@ -10,15 +10,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><?php echo $page_name;?></title>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css"/>
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="../css/index.css" type="text/css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="css/langDropDown.css"> -->
-    <!-- <link href="css/heroic-features.css" rel="stylesheet"> -->
+    
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/flatly/bootstrap.min.css">
+    
     <link rel="icon" href="../images/flower.ico">
+    
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css"/>
+    <!-- jQuery and Bootstrap's JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
   </head>
   

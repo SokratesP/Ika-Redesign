@@ -60,7 +60,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -114,8 +114,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">δργσδγ</p>
-				    </div>
+				    	<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.    </div>
 					</div>
 				</div>
 			</a>
@@ -123,7 +122,7 @@
 	</div>
 </div>
 
-<?php elseif ($user['user_type'] == "asfalismenos" or $_GET['cat'] =="asfalismenos"): ?>
+<?php elseif ( $user['user_type'] == "asfalismenos" or $_GET['cat'] =="asfalismenos"): ?>
 
 <div class="container">
 	<div class="row">
@@ -132,12 +131,12 @@
 				<div class="card border-primary mb-3" style="max-width: 20rem;">
 				  	<div class="card-header" >
 				  		<div class="myclass">
-				  			<h4 class="card-title" >Υποβολή Αίτησης Συνταξιοδότησης</h4>
+				  			<h4 class="card-title" >Ασφαλισμενος</h4>
 				  		</div>
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Υποβολή αίτησης για την έκδοση σύνταξης.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -154,7 +153,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να παρακολουθήσετε την πορεία του αιτήματος συνταξιοδότησης σας.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -171,7 +170,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -191,7 +190,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να υπολογίσετε το βασικό ποσό της συνταξής σας.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -208,7 +207,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να εκτυπώσετε βεβαιώσεις για φορολογική χρήση.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -225,7 +224,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">δργσδγ</p>
+				    	<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.</p>
 				    </div>
 					</div>
 				</div>
@@ -243,12 +242,12 @@
 				<div class="card border-primary mb-3" style="max-width: 20rem;">
 				  	<div class="card-header" >
 				  		<div class="myclass">
-				  			<h4 class="card-title" >Υποβολή Αίτησης Συνταξιοδότησης</h4>
+				  			<h4 class="card-title" >Εργοδοτης</h4>
 				  		</div>
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Υποβολή αίτησης για την έκδοση σύνταξης.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -265,7 +264,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να παρακολουθήσετε την πορεία του αιτήματος συνταξιοδότησης σας.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -282,7 +281,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -302,7 +301,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να υπολογίσετε το βασικό ποσό της συνταξής σας.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -319,7 +318,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να εκτυπώσετε βεβαιώσεις για φορολογική χρήση.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -336,7 +335,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">δργσδγ</p>
+				    	<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.</p>
 				    </div>
 					</div>
 				</div>
@@ -359,7 +358,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Υποβολή αίτησης για την έκδοση σύνταξης.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -376,7 +375,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να παρακολουθήσετε την πορεία του αιτήματος συνταξιοδότησης σας.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -393,7 +392,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -413,7 +412,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να υπολογίσετε το βασικό ποσό της συνταξής σας.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -430,7 +429,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Έδω μπορείτε να εκτυπώσετε βεβαιώσεις για φορολογική χρήση.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    </div>
 					</div>
 				</div>
@@ -447,7 +446,7 @@
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">δργσδγ</p>
+				    	<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.</p>
 				    </div>
 					</div>
 				</div>
