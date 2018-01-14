@@ -16,7 +16,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
-			<a href="404.html" class="link" target="blank">
+			<a href="pension.php" class="link" target="blank">
 				<div class="card border-primary mb-3" style="max-width: 20rem;">
 				  	<div class="card-header" >
 				  		<div class="myclass">
