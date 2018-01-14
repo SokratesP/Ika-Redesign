@@ -95,14 +95,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "INSERT INTO users (username, password, email, first_name, last_name, afm, amka, user_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $con->prepare($query);
         $stmt->bind_param("ssssssss",
-            sanitize($_POST["username"]),
-            md5(sanitize($_POST["password"])),
-            sanitize($_POST["email"]),
-            sanitize($_POST["first_name"]),
-            sanitize($_POST["last_name"]),
-            sanitize($_POST["afm"]),
-            sanitize($_POST["amka"]),
-            sanitize($_POST["user_type"])
+            $_POST["username"],
+            md5($_POST["password"]),
+            $_POST["email"],
+            $_POST["first_name"],
+            $_POST["last_name"],
+            $_POST["afm"],
+            $_POST["amka"],
+            $_POST["user_type"]
         );
         $stmt->execute();
         $user_id = $con->insert_id;

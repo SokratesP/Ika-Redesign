@@ -19,8 +19,8 @@
   
       // If there are no errors, look the user up in the database
       if (empty($validation_errors)) {
-          $username = sanitize($_POST["username"]);
-          $password_hash = md5(sanitize($_POST["password"]));
+          $username = $_POST["username"];
+          $password_hash = md5($_POST["password"]);
           $query = "SELECT * FROM users WHERE username = ? AND password = ?";
           $stmt = $con->prepare($query);
           $stmt->bind_param("ss", $username, $password_hash);
@@ -30,7 +30,8 @@
               $validation_errors[] = "Τα στοιχεία που εισάγατε δεν είναι έγκυρα. Παρακαλούμε προσπαθήστε ξανά.";
           } else {
               $_SESSION["user_id"] = $user["id"];
-              header("Location: perhome.php");
+              $type=$user["user_type"];
+              header("Location: perhome.php?cat=".$type);
           }
       }
   }

@@ -5,7 +5,51 @@
 $validation_errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty($_POST["first_name"]))
+        $validation_errors[] = "Το Όνομα είναι υποχρεωτικό.";
+    elseif (mb_strlen($_POST["first_name"]) > 255)
+        $validation_errors[] = "Το Όνομα δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
+
+
+    if (empty($_POST["last_name"]))
+        $validation_errors[] = "Το Επώνυμο είναι υποχρεωτικό.";
+    elseif (mb_strlen($_POST["last_name"]) > 255)
+        $validation_errors[] = "Το Επώνυμο δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
+
+    if (empty($_POST["afm"]))
+        $validation_errors[] = "Το ΑΦΜ είναι υποχρεωτικό.";
+    elseif (!is_numeric($_POST["afm"]))
+        $validation_errors[] = "Το ΑΦΜ πρέπει να αποτελείται μόνο απο νούμερα.";
+    elseif (mb_strlen($_POST["afm"]) > 10) 
+        $validation_errors[] = "Το ΑΦΜ δεν πρέπει να υπερβαίνει τους 9 χαρακτήρες.";     
+
+    if (empty($_POST["amka"]))
+        $validation_errors[] = "Το ΑΜΚΑ είναι υποχρεωτικό.";
+    elseif (!is_numeric($_POST["amka"]))
+        $validation_errors[] = "Το ΑΜΚΑ πρέπει να αποτελείται μόνο απο νούμερα.";
+    elseif(mb_strlen($_POST["amka"]) > 12)
+        $validation_errors[] = "Το ΑΜΚΑ δεν πρέπει να υπερβαίνει τους 11 χαρακτήρες.";
+
+    if (empty($_POST["user_type"]))
+        $validation_errors[] = "Η Ιδιότητα είναι υποχρεωτική.";
+    elseif (!in_array($_POST["user_type"], ["syntaksiouxos", "asfalismenos", "ergodotis"]))
+        $validation_errors[] = "Επιλέξτε μία έγκυρη Ιδιότητα.";
+
+    if (empty($_POST["username"]))
+        $validation_errors[] = "Το Όνομα Χρήστη είναι υποχρεωτικό.";
+    elseif (mb_strlen($_POST["username"]) > 255)
+        $validation_errors[] = "Το Όνομα Χρήστη δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
     
+
+    if (empty($_POST["email"]))
+        $validation_errors[] = "Το Email είναι υποχρεωτικό.";
+    elseif (mb_strlen($_POST["email"]) > 255)
+        $validation_errors[] = "Το Email δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
+    elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
+        $validation_errors[] = "Το Email που εισάγατε δεν είναι έγκυρο.";
+
+
 	if (empty($validation_errors)) {
 		$id = $user['id'];
         $query = "UPDATE users SET USERNAME = ? , FIRST_NAME = ? , LAST_NAME = ? , AFM = ? , AMKA = ? , USER_TYPE = ? , EMAIL = ? WHERE ID = ?";
@@ -35,6 +79,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container" style="padding-bottom:1.3em;">
 	<h1 align="center" >Προφιλ</h1>
 </div>
+
+ <?php if (count($validation_errors) > 0): ?>
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            <?php foreach ($validation_errors as $error): ?>
+                <li><?= $error ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
 
 <div class="container">
         <div class="row">
@@ -73,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span class="help-block">Αριθμος Μητρωου Κοινωνικης Ασφαλισης</span>
                             </div>
                         </div>
-
+                        
                         <div class="form-group-si row" >
                             <label class="col-md-4 control-label" for="user_type" style="text-align: center;">Ιδιοτητα</label>
                             <div class="col-md-6">
@@ -91,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="radio">
                                     <label for="ergodotis">
-                                        <input type="radio" name="user_type" id="ergodotis" value="ergodotis">
+                                        <input type="radio" name="user_type" id="ergodotis" value="ergodotis" >
                                         Εργοδοτης
                                     </label>
                                 </div>
