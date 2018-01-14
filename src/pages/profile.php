@@ -41,6 +41,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     elseif (mb_strlen($_POST["username"]) > 255)
         $validation_errors[] = "Το Όνομα Χρήστη δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
     
+    if (md5($_POST["password"]) == $user['password']){
+        if (empty($_POST["new_password"]))
+            $validation_errors[] = "Ο Κωδικός είναι υποχρεωτικός.";
+        elseif (mb_strlen($_POST["new_password"]) < 8)
+            $validation_errors[] = "Ο Κωδικός πρέπει να είναι τουλάχιστον 8 χαρακτήρες.";
+        elseif (mb_strlen($_POST["new_password"]) > 255)
+            $validation_errors[] = "Ο Κωδικός δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
+    }else
+        $validation_errors[]= "Ο παλιός κωδικός δεν είναι σωστός";
 
     if (empty($_POST["email"]))
         $validation_errors[] = "Το Email είναι υποχρεωτικό. Παρακαλώ ελέγξτε πάλι τα στοιχεία σας.";
@@ -50,11 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $validation_errors[] = "Το Email που εισάγατε δεν είναι έγκυρο.";
 
 
+
 	if (empty($validation_errors)) {
 		$id = $user['id'];
-        $query = "UPDATE users SET USERNAME = ? , FIRST_NAME = ? , LAST_NAME = ? , AFM = ? , AMKA = ? , USER_TYPE = ? , EMAIL = ? WHERE ID = ?";
+        $query = "UPDATE users SET USERNAME = ? , FIRST_NAME = ? , LAST_NAME = ? , AFM = ? , AMKA = ? , USER_TYPE = ? , EMAIL = ?, PASSWORD = ? WHERE ID = ?";
         $stmt = $con->prepare($query);
-        $stmt->bind_param("sssssssi",
+        $stmt->bind_param("ssssssssi",
         	$_POST["username"],
         	$_POST["first_name"],
         	$_POST["last_name"],
@@ -62,14 +72,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         	$_POST["amka"],
         	$_POST["user_type"],
         	$_POST["email"],
+            md5($_POST["new_password"]),
             $id
         );
         $stmt->execute();
-        header("Location: success.php");
+        header("Location: success.php?id=1");
     }
 }
 ?>
-<!-- <link rel="stylesheet" href="../css/profile.css" type="text/css"/> -->
 
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href=<?php echo "perhome.php?cat=". $user['user_type'];?> >Ηλεκτρονικές Υπηρεσίες</a></li>
@@ -87,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php endif; ?>
 
 <div class="container" style="padding-bottom:1.3em;">
-    <h1 align="center" >Προφιλ</h1>
+    <h1 align="center" >Προφίλ</h1>
 </div>
 
 
@@ -98,84 +108,108 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form class="form-horizontal" method="POST">
                     <fieldset>
                         <!-- Text input-->
-                        <div class="form-group-si row">
-                            <label class="col-md-4 control-label" for="first_name" style="text-align: center;">Ονομα</label>
+                        <div class="form-group row" >
+                            <label class="col-md-4 control-label" for="first_name" style="text-align: center;">όνομα</label>
                             <div class="col-md-6">
-                                <input id="first_name" name="first_name" value="<?php echo $user['first_name'];?>" type="text" class="form-control-si input-md">
+                                <input id="first_name" name="first_name" value="<?php echo $user['first_name'];?>" type="text" class="form-control input-md">
                             </div>
                         </div>
                         <!-- Text input-->
-                        <div class="form-group-si row">
-                            <label class="col-md-4 control-label" for="last_name" style="text-align: center;">Επωνυμο</label>
+                        <div class="form-group row" >
+                            <label class="col-md-4 control-label" for="last_name" style="text-align: center;">Επώνυμο</label>
                             <div class="col-md-6">
-                                <input id="last_name" name="last_name" value="<?php echo $user['last_name'];?>" type="text" class="form-control-si input-md">
+                                <input id="last_name" name="last_name" value="<?php echo $user['last_name'];?>" type="text" class="form-control input-md">
                             </div>
                         </div>
                         <!-- Text input-->
-                        <div class="form-group-si row" style="padding-bottom:0.7em;">
+                        <div class="form-group row"  style="padding-bottom:0.7em;">
                             <label class="col-md-4 control-label" for="afm" style="text-align: center;">Α.Φ.Μ. </label>
                             <div class="col-md-6">
                                 <input id="afm" name="afm" value="<?php echo $user['afm'];?>" type="text" placeholder="1234567890"
-                                       class="form-control-si input-md">
-                                <span class="help-block">Αριθμος Φορολογικου Μητρωου</span>
+                                       class="form-control input-md">
+                                <span class="help-block">Αριθμός Φορολογικού Μητρώου</span>
                             </div>
                         </div>
                         <!-- Text input-->
-                        <div class="form-group-si row" style="padding-bottom:0.7em;">
+                        <div class="form-group row"  style="padding-bottom:0.7em;">
                             <label class="col-md-4 control-label"  for="amka" style="text-align: center;">Α.Μ.Κ.Α.</label>
                             <div class="col-md-6">
                                 <input id="amka" name="amka" value="<?php echo $user['amka'];?>" type="text"
-                                       class="form-control-si input-md">
-                                <span class="help-block">Αριθμος Μητρωου Κοινωνικης Ασφαλισης</span>
+                                       class="form-control input-md">
+                                <span class="help-block">Αριθμός Μητρώου Κοινωνικής Ασφάλισης</span>
                             </div>
                         </div>
                         
-                        <div class="form-group-si row" >
-                            <label class="col-md-4 control-label" for="user_type" style="text-align: center;">Ιδιοτητα</label>
+                        <div class="form-group row"  >
+                            <label class="col-md-4 control-label" for="user_type" style="text-align: center;">Ιδιότητα</label>
                             <div class="col-md-6">
                                 <div class="radio">
                                     <label for="syntaksiouxos">
                                         <input type="radio" name="user_type" id="syntaksiouxos" value="syntaksiouxos">
-                                        Συνταξιουχος
+                                        Συνταξιούχος
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label for="asfalismenos">
                                         <input type="radio" name="user_type" id="asfalismenos" value="asfalismenos">
-                                        Ασφαλισμενος
+                                        Ασφαλισμένος
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label for="ergodotis">
                                         <input type="radio" name="user_type" id="ergodotis" value="ergodotis" >
-                                        Εργοδοτης
+                                        Εργοδότης
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <!-- Text input-->
-                        <div class="form-group-si row" style="padding-bottom:0.7em;">
-                            <label class="col-md-4 control-label" for="username" style="text-align: center;">Ονομα Χρηστη</label>
+                        <div class="form-group row"  style="padding-bottom:0.7em;">
+                            <label class="col-md-4 control-label" for="username" style="text-align: center;">Όνομα Χρήστη</label>
                             <div class="col-md-6">
-                                <input id="username" name="username" value="<?php echo $user['username'];?>" type="text" class="form-control-si input-md">
-                                <span class="help-block">Το ονομα που θα χρησιμοποειτε για την  σελιδα</span>
+                                <input id="username" name="username" value="<?php echo $user['username'];?>" type="text" class="form-control input-md">
+                                <span class="help-block">Το όνομα που θα χρησιμοποείτε για την σελίδα</span>
                             </div>
                         </div>
                         <!-- Text input-->
-                        <div class="form-group-si row">
+                        <div class="form-group row" >
+                            <label class="col-md-4 control-label" for="password" style="text-align: center;">Παλιός κωδικός</label>
+                            <div class="col-md-6">
+                                <input id="password" name="password" type="password" class="form-control input-md">
+                            </div>
+                        </div>
+                        <!-- Password input-->
+                        <div class="form-group row" >
+                            <label class="col-md-4 control-label" for="new_password" style="text-align: center;">Νέος κωδικός</label>
+                            <div class="col-md-6">
+                                <input id="new_password" name="new_password" type="password"
+                                       class="form-control input-md">
+                                <span class="help-block">Τουλάχιστον 8 χαρακτήρες</span>
+                            </div>
+                        </div>
+                        <div class="form-group row" >
+                            <label class="col-md-4 control-label" for="password_confirmation" style="text-align: center;">Επαλήθευση νέου κωδικού</label>
+                            <div class="col-md-6">
+                                <input id="password_confirmation" name="password_confirmation" type="password"
+                                       class="form-control input-md">
+                                <span class="help-block">Επαναλάβετε τον κωδικό που βάλατε στο προηγούμενο πεδίο</span>
+                            </div>
+                        </div>
+                        <div class="form-group row" >
                             <label class="col-md-4 control-label" for="email" style="text-align: center;">E-Mail</label>
                             <div class="col-md-6">
-                                <input id="email" name="email" value="<?php echo $user['email'];?>" type="text" class="form-control-si input-md">
+                                <input id="email" name="email" value="<?php echo $user['email'];?>" type="text" class="form-control input-md">
                             </div>
                         </div>
                         <!-- Button (Double) -->
-                        <div class="form-group-si row">
+                        <div class="form-group row"  style="padding-bottom: 2em;">
                             <label class="col-md-4 control-label" for="button1id"></label>
                             <div class="col-md-8" style="align-content: center;">
-                                <button type="submit" id="button2id" name="button2id" class="btn btn-success">
+                                <button type="submit" id="button2id" name="button2id" class="btn btn-success" >
                                     Επεξεργασία
                                 </button>
                             </div>
+                        </div>
                     </fieldset>
                 </form>
             </div>

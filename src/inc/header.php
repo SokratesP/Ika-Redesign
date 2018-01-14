@@ -112,7 +112,14 @@
               <a class="nav-link" href="../pages/index.php">Αρχική</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/perhome.php?cat=gen">Υπηρεσίες</a>
+              <?php 
+              if(empty($user['user_type'])){
+                $cat="gen";
+              }else{
+                $cat=$user['user_type'];
+              }
+              ?>
+              <a class="nav-link" href=<?php echo "perhome.php?cat=". $cat;?>>Υπηρεσίες</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../pages/contact.php">Χρήσιμες Πληροφορίες</a>

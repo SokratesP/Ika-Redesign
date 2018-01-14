@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2018 at 06:02 PM
+-- Generation Time: Jan 14, 2018 at 08:53 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -29,22 +29,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `pensions` (
-  `onoma` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `poso` int(11) NOT NULL,
-  `id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `ensima` int(12) NOT NULL,
+  `hmeresd` int(12) NOT NULL,
+  `pro` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `pensions`
 --
 
-INSERT INTO `pensions` (`onoma`, `poso`, `id`) VALUES
-('test', 123456, 0),
-('test', 123456, 0),
-('onoma', 123456, 0),
-('onoma', 123456, 0),
-('onoma', 123456, 0),
-('onoma', 12345678, 0);
+INSERT INTO `pensions` (`id`, `name`, `ensima`, `hmeresd`, `pro`) VALUES
+(17, 'Κατινα Κατινου', 1000, 2358, 0),
+(18, 'Κατινα test', 6541, 546, 0);
 
 -- --------------------------------------------------------
 
@@ -70,12 +68,19 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `first_name`, `last_name`, `afm`, `amka`, `user_type`) VALUES
 (10, 'dimitris', '25d55ad283aa400af464c76d713c07ad', 'dimitris@gmail.com', 'Δημητρης', 'Δημητριου', '1234567890', '15098987653', 'ergodotis'),
-(12, 'κατινα', '25d55ad283aa400af464c76d713c07ad', 'katina10@test.com', 'Κατινα', 'Κατινου', '1234567890', '01015054876', 'syntaksiouxos'),
-(13, 'αντ', '25d55ad283aa400af464c76d713c07ad', 'ant@test.com', 'Αντωνης', 'Αντωνιου', '1234567890', '15098987654', 'asfalismenos');
+(12, 'κατινα', '25f9e794323b453885f5181f1b624d0b', 'katina10@test.com', 'Κατινα', 'Κατινου', '1234567890', '01015054876', 'syntaksiouxos'),
+(13, 'αντ', '25d55ad283aa400af464c76d713c07ad', 'ant@test.com', 'Αντωνης', 'Αντωνιου', '1234567890', '15098987654', 'asfalismenos'),
+(14, 'τεστ2', '25f9e794323b453885f5181f1b624d0b', 'test@test.com', 'Τεστ', 'τετσ', '1234567890', '12345678789', 'asfalismenos');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `pensions`
+--
+ALTER TABLE `pensions`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -90,10 +95,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `pensions`
+--
+ALTER TABLE `pensions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

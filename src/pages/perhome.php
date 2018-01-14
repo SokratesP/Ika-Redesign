@@ -34,7 +34,7 @@
 		</div>
 
 		<div class="col-md-4">
-			<a href="404.html" class="link" target="blank">
+			<a href="progress.php" class="link" target="blank">
 				<div class="card border-primary mb-3" style="max-width: 20rem;">
 				  	<div class="card-header" >
 				  		<div class="myclass">
@@ -351,12 +351,12 @@
 				<div class="card border-primary mb-3" style="max-width: 20rem;">
 				  	<div class="card-header" >
 				  		<div class="myclass">
-				  			<h4 class="card-title" >Υποβολή Αίτησης Συνταξιοδότησης</h4>
+				  			<h4 class="card-title" >Lorem ipsum</h4>
 				  		</div>
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    	<p class="card-text">Υποβολή αίτησης για την έκδοση σύνταξης.</p>
+				    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    	</div>
 					</div>
 				</div>
@@ -368,12 +368,12 @@
 				<div class="card border-primary mb-3" style="max-width: 20rem;">
 				  	<div class="card-header" >
 				  		<div class="myclass">
-				  			<h4 class="card-title">Παρακολούθηση της Πορείας της Αίτησης Συνταξιοδότησης</h4>
+				  			<h4 class="card-title">Lorem ipsum</h4>
 				  		</div>
 				  	</div>
 				  	<div class="card-body text-primary">
 				  		<div class="mycardclass">
-				    		<p class="card-text">Έδω μπορείτε να παρακολουθήσετε την πορεία του αιτήματος συνταξιοδότησης σας.</p>
+				    		<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 				    	</div>
 					</div>
 				</div>
@@ -385,7 +385,7 @@
 				<div class="card border-primary mb-3" style="max-width: 20rem;">
 				  	<div class="card-header" >
 				  		<div class="myclass">
-					  		<h4 class="card-title">Οδηγός Θεμελίωσης Συνταξιοδοτικού Δικαιώματος</h4>
+					  		<h4 class="card-title">Lorem ipsum</h4>
 					  	</div>
 				  	</div>
 				  	<div class="card-body text-primary">
@@ -405,12 +405,12 @@
 					<div class="card border-primary mb-3" style="max-width: 20rem;">
 					  	<div class="card-header" >
 					  		<div class="myclass">
-						  		<h4 class="card-title">	Εργαλείο Υπολογισμός Βασικού Ποσού Σύνταξης</h4>
+						  		<h4 class="card-title">Lorem ipsum</h4>
 						  	</div>
 					  	</div>
 					  	<div class="card-body text-primary">
 					  		<div class="mycardclass">
-						    	<p class="card-text">Έδω μπορείτε να υπολογίσετε το βασικό ποσό της συνταξής σας.</p>
+						    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 						    </div>
 						</div>
 					</div>
@@ -422,12 +422,12 @@
 					<div class="card border-primary mb-3" style="max-width: 20rem;">
 					  	<div class="card-header" >
 					  		<div class="myclass">
-					  			<h4 class="card-title">	Βεβαίωση Συντάξεων</h4>
+					  			<h4 class="card-title">Lorem ipsum</h4>
 					  		</div>
 					  	</div>
 					  	<div class="card-body text-primary">
 					  		<div class="mycardclass">
-					    		<p class="card-text">Έδω μπορείτε να εκτυπώσετε βεβαιώσεις για φορολογική χρήση.</p>
+					    		<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in mi erat.</p>
 					    	</div>
 						</div>
 					</div>

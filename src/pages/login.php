@@ -7,7 +7,6 @@
   
   $validation_errors = [];
   
-  // Check if the form has been POSTed
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Validate user input
       if (empty($_POST["username"]))
@@ -35,7 +34,7 @@
           }
       }
   }
-  ?>
+?>
 <?php
   $page_name = "login";
   require("../inc/header.php");

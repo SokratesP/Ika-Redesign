@@ -1,5 +1,5 @@
 <?php
-   $page_name = "ΙΚΑ Προφίλ";
+   $page_name = "ΙΚΑ τετσ";
    include("../inc/header.php");
 ?> 
 <link rel="stylesheet" href="../css/test.css" type="text/css"/>

@@ -16,7 +16,6 @@
          <div class="card">
             <img class="card-img-top" src="../images/pensioner3.jpg" style="height: 15.813em;">
             <div class="card-footer">
-               <!-- <?php $_SESSION['category'] = "syntaksiouxos"; ?> -->
                <a href="perhome.php?cat=syntaksiouxos" class="btn btn-primary">Συνταξιούχος</a>
             </div>
          </div>
@@ -25,7 +24,6 @@
          <div class="card">
             <img class="card-img-top" src="../images/employee.jpg" style="height: 15.813em;">
             <div class="card-footer">
-               <!-- <?php $_SESSION['category'] = "asfalismenos"; ?> -->
                <a href="perhome.php?cat=asfalismenos" class="btn btn-primary">Ασφαλιζόμενος</a>
             </div>
          </div>
@@ -34,7 +32,6 @@
          <div class="card">
             <img class="card-img-top" src="../images/employer.jpg" style="height: 15.813em;">
             <div class="card-footer">
-               <!-- <?php $_SESSION['category'] = "ergodotis"; ?> -->
                <a href="perhome.php?cat=ergodotis" class="btn btn-primary">Εργοδότης</a>
             </div>
          </div>
