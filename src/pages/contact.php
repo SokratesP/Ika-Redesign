@@ -15,8 +15,41 @@
 <div class="conteiner" style="padding-top: 2em;">
 	<div class="row">
 		<div class="col-md-4" style="text-align: center;">
-			<h4>Ωραρια</h4>
-
+			<div class="conteiner" style="width: 90%; margin: 0 auto;">
+			<h4>Ωράρια</h4>
+			<table class="table table-hover">
+					<thead>
+					<tr>
+						<th scope="col">Ιδιότητα</th>
+						<th scope="col">Τήλεφωνο</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="table-active">
+						<th scope="row">Υπηρεσίες Πρωτοκόλλου και Διεκπεραίωσης</th>
+						<td>Από 07:30 έως 15:00</td>
+					</tr>
+					<tr>
+						<th scope="row">Κεντρικό Ταμείο</th>
+						<td>Από 08:00 έως 13:30</td>
+					</tr>
+					<tr class="table-active">
+						<th scope="row">Ταμεία</th>
+						<td>Από 8:00 έως 13:30</td>
+					<tr>
+						<th scope="row">Lorem ipsum dolor</th>
+						<td>210 - 1234567</td>
+					</tr>
+					<tr class="table-active">
+						<th scope="row">Lorem ipsum dolor</th>
+						<td>210 - 1234567</td>
+					<tr>
+						<th scope="row">Lorem ipsum dolor</th>
+						<td>210 - 1234567</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 		<div class="col-md-4" style="text-align: center;">
@@ -62,14 +95,14 @@
 					</tr>
 					<tr class="table-active">
 						<th scope="row">Lorem ipsum dolor</th>
-						<td>210 - 1234567				</tr>
+						<td>210 - 1234567</td>
 					<tr>
 						<th scope="row">Lorem ipsum dolor</th>
 						<td>210 - 1234567</td>
 					</tr>
 					<tr class="table-active">
 						<th scope="row">Lorem ipsum dolor</th>
-						<td>210 - 1234567				</tr>
+						<td>210 - 1234567</td>
 					<tr>
 						<th scope="row">Lorem ipsum dolor</th>
 						<td>210 - 1234567</td>
