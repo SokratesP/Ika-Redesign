@@ -12,7 +12,7 @@
 	<h2 align="center" class="pagetitle">Ηλεκτρονικές Υπηρεσίες</h2>
 </div>
 
-<?php if ($user['user_type'] == "syntaksiouxos" or $_GET['cat'] =="syntaksiouxos" ): ?>	
+<?php if (/*$user['user_type'] == "syntaksiouxos" or*/ $_GET['cat'] =="syntaksiouxos" ): ?>	
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -122,7 +122,7 @@
 	</div>
 </div>
 
-<?php elseif ( $user['user_type'] == "ergodotis" or $_GET['cat'] =="ergodotis"): ?>
+<?php elseif ( /*$user['user_type'] == "ergodotis" or*/ $_GET['cat'] =="ergodotis"): ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -232,7 +232,7 @@
 	</div>
 </div>
 
-<?php elseif ($user['user_type'] == "asfalismenos" or $_GET['cat'] =="asfalismenos"): ?>
+<?php elseif (/*$user['user_type'] == "asfalismenos" or*/ $_GET['cat'] =="asfalismenos"): ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -452,11 +452,7 @@
 	</div>
 </div>
 <?php endif; ?>
-<<<<<<< HEAD
-</div></div></div></div>
-=======
 
 </div></div></div></div>
 
->>>>>>> cbe8787e096cc16948642312988f9902c260bfd0
 <?php include("../inc/footer.php") ?>
