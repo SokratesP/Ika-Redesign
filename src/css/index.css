@@ -138,8 +138,8 @@ div.upTitle
 {
 	/*position: absolute;*/
 	color: white;
-	padding-left: 9.375em;
-	padding-top: 0.5em;
+	/*padding-left: 9.375em;*/
+	/*padding-top: 0.5em;*/
 	/*top: 30px;
     left: 400px;*/
 	/*width: auto;
@@ -185,6 +185,7 @@ div.navbar1
 div.body
 {
 	position: absolute;
+    max-width: 100%;
 }
 
 div.bottom 
@@ -209,13 +210,14 @@ html {
 
 body {
     overflow: auto;
-    margin: 0 0 10px; /* bottom = footer height */
+    margin: 0 0 25px; /* bottom = footer height*/ 
+    margin-bottom: -25px;
 }
 
 footer {
     background-color: black;
     color: white;
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     height: 25px;
@@ -226,6 +228,38 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+
+/*html, body {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html{
+    position: relative;
+}
+
+.wrap {
+  min-height: 100%;
+  max-width: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:25px;  this needs to be bigger than footer height
+}
+
+.footer {
+  position: relative;
+  background-color: black;
+  color: white;
+  margin-top: -25px; /* negative value of footer height 
+  height: 25px;
+/*  clear:both;
+  padding-top:20px;
+} */
 
 .greetings{
     align-self: center;

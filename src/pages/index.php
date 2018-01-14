@@ -14,7 +14,7 @@
    <div class="row text-center">
       <div class="col-lg-3 col-md-6 mb-4">
          <div class="card">
-            <img class="card-img-top" src="../images/pensioner.jpg" style="height: 15.813em;" alt="">
+            <img class="card-img-top" src="../images/pensioner3.jpg" style="height: 15.813em;">
             <div class="card-footer">
                <!-- <?php $_SESSION['category'] = "syntaksiouxos"; ?> -->
                <a href="perhome.php?cat=syntaksiouxos" class="btn btn-primary">Συνταξιούχος</a>
@@ -23,7 +23,7 @@
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x500" alt="">
+            <img class="card-img-top" src="../images/employee.jpg" style="height: 15.813em;">
             <div class="card-footer">
                <!-- <?php $_SESSION['category'] = "asfalismenos"; ?> -->
                <a href="perhome.php?cat=asfalismenos" class="btn btn-primary">Ασφαλιζόμενος</a>
@@ -32,7 +32,7 @@
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
          <div class="card">
-            <img class="card-img-top" src="../images/employer.jpg" style="height: 15.813em;" alt="">
+            <img class="card-img-top" src="../images/employer.jpg" style="height: 15.813em;">
             <div class="card-footer">
                <!-- <?php $_SESSION['category'] = "ergodotis"; ?> -->
                <a href="perhome.php?cat=ergodotis" class="btn btn-primary">Εργοδότης</a>
@@ -41,7 +41,7 @@
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x500" alt="">
+            <img class="card-img-top" src="../images/general.jpg" style="height: 15.813em;">
             <div class="card-footer">
                <a href="perhome.php?cat=gen" class="btn btn-primary">Γενική Είσοδος</a>
             </div>

@@ -31,7 +31,8 @@
   </head>
   
   <body>
-    
+<!--     <div class="wrap">
+    <div id="main" class="clear-top"> -->
     <!-- Navigation -->
     <div class="up">
       <div class="row">
@@ -42,7 +43,7 @@
         </div>
         
         <div class="upTitle col-6">
-          <h1>I.K.A.</h1>
+          <h1 style="margin-left: 1em;">IKA</h1>
         </div>
         
         <div class="upLogIn col-2">
@@ -62,19 +63,19 @@
                 <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
               </div>
               <div class="container-log">
-                <label><b>Ονομα Χρηστη</b></label>
+                <label><b>Όνομα Χρήστη</b></label>
                 <input type="text" name="username" required>
-                <label><b>Κωδικος</b></label>
+                <label><b>Κωδικός</b></label>
                 <input type="password" name="password" required>
-                <button class="btn btn-success" type="submit">Εισοδος</button>
-                <input type="checkbox" checked="checked"> Να με θυμασαι.
+                <button class="btn btn-success" type="submit">Είσοδος</button>
+                <input type="checkbox"> Να με θυμάσαι.
               </div>
               <div class="container-log" style="background-color:#f1f1f1">
                 <button class="btn btn-danger" type="button"
                   onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
-                Ακυρωση
+                Ακ΄θρωση
                 </button>
-                <span class="psw"> <a href="#">Ξεχασα τον κωδικο μου!</a></span>
+                <span class="psw"> <a href="404.html">Ξέχασα τον κωδικό μου!</a></span>
               </div>
             </form>
           </div>
@@ -114,7 +115,7 @@
               <a class="nav-link" href="../pages/perhome.php?cat=gen">Υπηρεσίες</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/404.html">Επικοινωνία</a>
+              <a class="nav-link" href="../pages/contact.php">Χρήσιμες Πληροφορίες</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../pages/404.html">Βοήθεια</a>
