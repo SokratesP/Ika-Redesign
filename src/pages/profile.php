@@ -8,16 +8,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 	if (empty($validation_errors)) {
 		$id = $user['id'];
-        $query = "UPDATE USERS SET USERNAME = ? AND FIRST_NAME = ? and LAST_NAME = ? and AFM = ? and AMKA = ? and USER_TYPE = ? and EMAIL = ? WHERE ID = '$id'";
+        $query = "UPDATE USERS SET USERNAME = '?' AND FIRST_NAME = ? and LAST_NAME = ? and AFM = ? and AMKA = ? and USER_TYPE = ? and EMAIL = ? WHERE ID = '$id'";
         $stmt = $con->prepare($query);
         $stmt->bind_param("sssssss",
-        	sanitize($_POST["username"]),
-        	sanitize($_POST["first_name"]),
-        	sanitize($_POST["last_name"]),
-        	sanitize($_POST["afm"]),
-        	sanitize($_POST["amka"]),
-        	sanitize($_POST["user_type"]),
-        	sanitize($_POST["email"])
+        	$_POST["username"],
+        	$_POST["first_name"],
+        	$_POST["last_name"],
+        	$_POST["afm"],
+        	$_POST["amka"],
+        	$_POST["user_type"],
+        	$_POST["email"]
         );
         $stmt->execute();
         header("Location: index.php");
