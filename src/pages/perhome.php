@@ -113,7 +113,7 @@
 					  	</div>
 					  	<div class="card-body text-primary">
 					  		<div class="mycardclass">
-					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.   
+					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.</p>   
 					    	</div>
 						</div>
 					</div>
@@ -223,7 +223,7 @@
 					  	</div>
 					  	<div class="card-body text-primary">
 					  		<div class="mycardclass">
-					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.   
+					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.</p>   
 					    	</div>
 						</div>
 					</div>
@@ -333,7 +333,7 @@
 					  	</div>
 					  	<div class="card-body text-primary">
 					  		<div class="mycardclass">
-					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.   
+					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.</p>   
 					    	</div>
 						</div>
 					</div>
@@ -443,7 +443,7 @@
 					  	</div>
 					  	<div class="card-body text-primary">
 					  		<div class="mycardclass">
-					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.   
+					    		<p class="card-text">Έδω θα βρείτε δίαφορες υπηρεσίες που είναι διαθέσιμες απο το ΙΚΑ.</p>   
 					    	</div>
 						</div>
 					</div>
@@ -451,7 +451,6 @@
 			</div>
 	</div>
 </div>
-
 <?php endif; ?>
 
 <?php include("../inc/footer.php") ?>

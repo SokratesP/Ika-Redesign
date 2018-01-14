@@ -8,19 +8,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 	if (empty($validation_errors)) {
 		$id = $user['id'];
-        $query = "UPDATE USERS SET USERNAME = '?' AND FIRST_NAME = ? and LAST_NAME = ? and AFM = ? and AMKA = ? and USER_TYPE = ? and EMAIL = ? WHERE ID = '$id'";
+        $query = "UPDATE users SET USERNAME = ? , FIRST_NAME = ? , LAST_NAME = ? , AFM = ? , AMKA = ? , USER_TYPE = ? , EMAIL = ? WHERE ID = ?";
         $stmt = $con->prepare($query);
-        $stmt->bind_param("sssssss",
+        $stmt->bind_param("sssssssi",
         	$_POST["username"],
         	$_POST["first_name"],
         	$_POST["last_name"],
         	$_POST["afm"],
         	$_POST["amka"],
         	$_POST["user_type"],
-        	$_POST["email"]
+        	$_POST["email"],
+            $id
         );
         $stmt->execute();
-        header("Location: index.php");
+        header("Location: success.php");
     }
 }
 ?>
@@ -31,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <li class="breadcrumb-item active">Προφίλ</li>
 </ol>
 
-<div class="conteiner" style="padding-bottom:1.3em;">
+<div class="container" style="padding-bottom:1.3em;">
 	<h1 align="center" >Προφιλ</h1>
 </div>
 

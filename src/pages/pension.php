@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	$id=$user['id'];
         $query = "INSERT INTO pensions (onoma,poso,id) VALUES (?, ?, ?)";
         $stmt = $con->prepare($query);
-        $stmt->bind_param("sss",
+        $stmt->bind_param("ssi",
             $_POST["onoma"],
             $_POST["poso"],
             $_POST[$user['id']]
