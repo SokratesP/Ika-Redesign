@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2018 at 02:12 PM
+-- Generation Time: Jan 14, 2018 at 06:02 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -21,6 +21,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `sdi1400166`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pensions`
+--
+
+CREATE TABLE `pensions` (
+  `onoma` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `poso` int(11) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pensions`
+--
+
+INSERT INTO `pensions` (`onoma`, `poso`, `id`) VALUES
+('test', 123456, 0),
+('test', 123456, 0),
+('onoma', 123456, 0),
+('onoma', 123456, 0),
+('onoma', 123456, 0),
+('onoma', 12345678, 0);
 
 -- --------------------------------------------------------
 
@@ -45,9 +69,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `first_name`, `last_name`, `afm`, `amka`, `user_type`) VALUES
-(9, 'test', '25d55ad283aa400af464c76d713c07ad', 'test@test.com', 'test', 'test', '1234567890', '15098987653', 'ergodotis'),
 (10, 'dimitris', '25d55ad283aa400af464c76d713c07ad', 'dimitris@gmail.com', 'Δημητρης', 'Δημητριου', '1234567890', '15098987653', 'ergodotis'),
-(12, 'κατινα', '25d55ad283aa400af464c76d713c07ad', 'katina50@test.com', 'Κατινα', 'Κατινου', '1234567890', '01015054876', 'syntaksiouxos');
+(12, 'κατινα', '25d55ad283aa400af464c76d713c07ad', 'katina10@test.com', 'Κατινα', 'Κατινου', '1234567890', '01015054876', 'syntaksiouxos'),
+(13, 'αντ', '25d55ad283aa400af464c76d713c07ad', 'ant@test.com', 'Αντωνης', 'Αντωνιου', '1234567890', '15098987654', 'asfalismenos');
 
 --
 -- Indexes for dumped tables
@@ -69,7 +93,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

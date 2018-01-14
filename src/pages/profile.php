@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- <link rel="stylesheet" href="../css/profile.css" type="text/css"/> -->
 
 <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="perhome.php">Ηλεκτρονικές Υπηρεσίες</a></li>
+  <li class="breadcrumb-item"><a href=<?php echo "perhome.php?cat=". $user['user_type'];?> >Ηλεκτρονικές Υπηρεσίες</a></li>
   <li class="breadcrumb-item active">Προφίλ</li>
 </ol>
 

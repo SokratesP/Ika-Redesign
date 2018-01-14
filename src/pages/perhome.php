@@ -6,8 +6,9 @@
 <link rel="stylesheet" href="../css/perhome.css" type="text/css"/>
 
 <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="perhome.php?cat=gen">Ηλεκτρονικές Υπηρεσίες</a></li>
+	<li class="breadcrumb-item"><a href=<?php echo "perhome.php?cat=". $user['user_type'];?> >Ηλεκτρονικές Υπηρεσίες</a></li>
 </ol>
+
 <div class="container">
 	<h2 align="center" class="pagetitle">Ηλεκτρονικές Υπηρεσίες</h2>
 </div>
