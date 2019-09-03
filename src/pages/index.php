@@ -1,6 +1,6 @@
 <?php
-   $page_name = "Ικα Αρχική";
-   include("../inc/header.php");
+   $page_name = 'Ικα Αρχική';
+   include '../inc/header.php';
 ?>
 
 <!-- Page Content -->
@@ -119,4 +119,4 @@
    </div>
 </div>
 
-<?php include("../inc/footer.php") ?>
+<?php include '../inc/footer.php'?>

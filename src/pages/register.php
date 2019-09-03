@@ -1,109 +1,116 @@
 <?php
-$page_name = "Εγγραφή";
-include("../inc/config.php");
+$page_name = 'Εγγραφή';
+include '../inc/config.php';
 
 // If the user is logged in, there is no reason for him to register again
 // Redirect to home page
-if ($user != null)
-    header("Location: index.php");
+if ($user != null) {
+    header('Location: index.php');
+}
 
 $validation_errors = [];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // This means that the form has just been submitted
 
     // Validate user input and create a new user
 
-    if (empty($_POST["first_name"]))
-        $validation_errors[] = "Το Όνομα είναι υποχρεωτικό.";
-    elseif (mb_strlen($_POST["first_name"]) > 255)
-        $validation_errors[] = "Το Όνομα δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
+    if (empty($_POST['first_name'])) {
+        $validation_errors[] = 'Το Όνομα είναι υποχρεωτικό.';
+    } elseif (mb_strlen($_POST['first_name']) > 255) {
+        $validation_errors[] = 'Το Όνομα δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.';
+    }
 
-    if (empty($_POST["last_name"]))
-        $validation_errors[] = "Το Επώνυμο είναι υποχρεωτικό.";
-    elseif (mb_strlen($_POST["last_name"]) > 255)
-        $validation_errors[] = "Το Επώνυμο δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
+    if (empty($_POST['last_name'])) {
+        $validation_errors[] = 'Το Επώνυμο είναι υποχρεωτικό.';
+    } elseif (mb_strlen($_POST['last_name']) > 255) {
+        $validation_errors[] = 'Το Επώνυμο δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.';
+    }
 
-    if (empty($_POST["afm"]))
-        $validation_errors[] = "Το ΑΦΜ είναι υποχρεωτικό.";
-    elseif (!is_numeric($_POST["afm"]))
-        $validation_errors[] = "Το ΑΦΜ πρέπει να αποτελείται μόνο απο νούμερα.";
-    elseif (mb_strlen($_POST["afm"]) > 10) 
-        $validation_errors[] = "Το ΑΦΜ δεν πρέπει να υπερβαίνει τους 9 χαρακτήρες.";     
+    if (empty($_POST['afm'])) {
+        $validation_errors[] = 'Το ΑΦΜ είναι υποχρεωτικό.';
+    } elseif (!is_numeric($_POST['afm'])) {
+        $validation_errors[] = 'Το ΑΦΜ πρέπει να αποτελείται μόνο απο νούμερα.';
+    } elseif (mb_strlen($_POST['afm']) > 10) {
+        $validation_errors[] = 'Το ΑΦΜ δεν πρέπει να υπερβαίνει τους 9 χαρακτήρες.';
+    }
 
-    if (empty($_POST["amka"]))
-        $validation_errors[] = "Το ΑΜΚΑ είναι υποχρεωτικό.";
-    elseif (!is_numeric($_POST["amka"]))
-        $validation_errors[] = "Το ΑΜΚΑ πρέπει να αποτελείται μόνο απο νούμερα.";
-    elseif(mb_strlen($_POST["amka"]) > 12)
-        $validation_errors[] = "Το ΑΜΚΑ δεν πρέπει να υπερβαίνει τους 11 χαρακτήρες.";
+    if (empty($_POST['amka'])) {
+        $validation_errors[] = 'Το ΑΜΚΑ είναι υποχρεωτικό.';
+    } elseif (!is_numeric($_POST['amka'])) {
+        $validation_errors[] = 'Το ΑΜΚΑ πρέπει να αποτελείται μόνο απο νούμερα.';
+    } elseif (mb_strlen($_POST['amka']) > 12) {
+        $validation_errors[] = 'Το ΑΜΚΑ δεν πρέπει να υπερβαίνει τους 11 χαρακτήρες.';
+    }
 
-    if (empty($_POST["user_type"]))
-        $validation_errors[] = "Η Ιδιότητα είναι υποχρεωτική.";
-    elseif (!in_array($_POST["user_type"], ["syntaksiouxos", "asfalismenos", "ergodotis"]))
-        $validation_errors[] = "Επιλέξτε μία έγκυρη Ιδιότητα.";
+    if (empty($_POST['user_type'])) {
+        $validation_errors[] = 'Η Ιδιότητα είναι υποχρεωτική.';
+    } elseif (!in_array($_POST['user_type'], ['syntaksiouxos', 'asfalismenos', 'ergodotis'])) {
+        $validation_errors[] = 'Επιλέξτε μία έγκυρη Ιδιότητα.';
+    }
 
-    if (empty($_POST["username"]))
-        $validation_errors[] = "Το Όνομα Χρήστη είναι υποχρεωτικό.";
-    elseif (mb_strlen($_POST["username"]) > 255)
-        $validation_errors[] = "Το Όνομα Χρήστη δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
-    else {
-        $query = "SELECT COUNT(*) AS count FROM users WHERE username = ?";
+    if (empty($_POST['username'])) {
+        $validation_errors[] = 'Το Όνομα Χρήστη είναι υποχρεωτικό.';
+    } elseif (mb_strlen($_POST['username']) > 255) {
+        $validation_errors[] = 'Το Όνομα Χρήστη δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.';
+    } else {
+        $query = 'SELECT COUNT(*) AS count FROM users WHERE username = ?';
         $stmt = $con->prepare($query);
-        $stmt->bind_param("s", $_POST["username"]);
+        $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $results = $stmt->get_result()->fetch_assoc();
-        if ($results["count"] > 0) {
-            $validation_errors[] = "Το Όνομα Χρήστη που εισάγατε χρησιμοποιείται ήδη.";
+        if ($results['count'] > 0) {
+            $validation_errors[] = 'Το Όνομα Χρήστη που εισάγατε χρησιμοποιείται ήδη.';
         }
     }
 
-    if (empty($_POST["password"]))
-        $validation_errors[] = "Ο Κωδικός είναι υποχρεωτικός.";
-    elseif (mb_strlen($_POST["password"]) < 8)
-        $validation_errors[] = "Ο Κωδικός πρέπει να είναι τουλάχιστον 8 χαρακτήρες.";
-    elseif (mb_strlen($_POST["password"]) > 255)
-        $validation_errors[] = "Ο Κωδικός δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
+    if (empty($_POST['password'])) {
+        $validation_errors[] = 'Ο Κωδικός είναι υποχρεωτικός.';
+    } elseif (mb_strlen($_POST['password']) < 8) {
+        $validation_errors[] = 'Ο Κωδικός πρέπει να είναι τουλάχιστον 8 χαρακτήρες.';
+    } elseif (mb_strlen($_POST['password']) > 255) {
+        $validation_errors[] = 'Ο Κωδικός δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.';
+    }
 
-    if (empty($_POST["email"]))
-        $validation_errors[] = "Το Email είναι υποχρεωτικό.";
-    elseif (mb_strlen($_POST["email"]) > 255)
-        $validation_errors[] = "Το Email δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.";
-    elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
-        $validation_errors[] = "Το Email που εισάγατε δεν είναι έγκυρο.";
-    else {
-        $query = "SELECT COUNT(*) AS count FROM users WHERE email = ?";
+    if (empty($_POST['email'])) {
+        $validation_errors[] = 'Το Email είναι υποχρεωτικό.';
+    } elseif (mb_strlen($_POST['email']) > 255) {
+        $validation_errors[] = 'Το Email δεν πρέπει να υπερβαίνει τους 255 χαρακτήρες.';
+    } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $validation_errors[] = 'Το Email που εισάγατε δεν είναι έγκυρο.';
+    } else {
+        $query = 'SELECT COUNT(*) AS count FROM users WHERE email = ?';
         $stmt = $con->prepare($query);
-        $stmt->bind_param("s", $_POST["email"]);
+        $stmt->bind_param('s', $_POST['email']);
         $stmt->execute();
         $results = $stmt->get_result()->fetch_assoc();
-        if ($results["count"] > 0) {
-            $validation_errors[] = "Το Email που εισάγατε χρησιμοποιείται ήδη.";
+        if ($results['count'] > 0) {
+            $validation_errors[] = 'Το Email που εισάγατε χρησιμοποιείται ήδη.';
         }
     }
 
     if (empty($validation_errors)) {
-        $query = "INSERT INTO users (username, password, email, first_name, last_name, afm, amka, user_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $query = 'INSERT INTO users (username, password, email, first_name, last_name, afm, amka, user_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
         $stmt = $con->prepare($query);
-        $stmt->bind_param("ssssssss",
-            $_POST["username"],
-            md5($_POST["password"]),
-            $_POST["email"],
-            $_POST["first_name"],
-            $_POST["last_name"],
-            $_POST["afm"],
-            $_POST["amka"],
-            $_POST["user_type"]
+        $stmt->bind_param('ssssssss',
+            $_POST['username'],
+            md5($_POST['password']),
+            $_POST['email'],
+            $_POST['first_name'],
+            $_POST['last_name'],
+            $_POST['afm'],
+            $_POST['amka'],
+            $_POST['user_type']
         );
         $stmt->execute();
         $user_id = $con->insert_id;
 
         // Login as the new user automatically and redirect to home page
-        $_SESSION["user_id"] = $user_id;
-        header("Location: index.php");
+        $_SESSION['user_id'] = $user_id;
+        header('Location: index.php');
     }
 }
-include("../inc/header.php");
+include '../inc/header.php';
 ?>
 
     <div class="container">
@@ -231,4 +238,4 @@ include("../inc/header.php");
     </div>
     <br><br>
     
-<?php include("../inc/footer.php") ?>
+<?php include '../inc/footer.php'?>

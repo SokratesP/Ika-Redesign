@@ -1,43 +1,45 @@
 <?php
-  require("../inc/config.php");
-  
+  require '../inc/config.php';
+
   // User has logged in, no need to log in again.
-  if ($user != null)
-      header("Location: index.php");
-  
+  if ($user != null) {
+      header('Location: index.php');
+  }
+
   $validation_errors = [];
-  
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Validate user input
-      if (empty($_POST["username"]))
-          $validation_errors[] = "Το Όνομα Χρήστη είναι υποχρεωτικό.";
-  
-      if (empty($_POST["password"])) {
-          $validation_errors[] = "Ο Κωδικός Πρόσβασης είναι υποχρεωτικός.";
+      if (empty($_POST['username'])) {
+          $validation_errors[] = 'Το Όνομα Χρήστη είναι υποχρεωτικό.';
       }
-  
+
+      if (empty($_POST['password'])) {
+          $validation_errors[] = 'Ο Κωδικός Πρόσβασης είναι υποχρεωτικός.';
+      }
+
       // If there are no errors, look the user up in the database
       if (empty($validation_errors)) {
-          $username = $_POST["username"];
-          $password_hash = md5($_POST["password"]);
-          $query = "SELECT * FROM users WHERE username = ? AND password = ?";
+          $username = $_POST['username'];
+          $password_hash = md5($_POST['password']);
+          $query = 'SELECT * FROM users WHERE username = ? AND password = ?';
           $stmt = $con->prepare($query);
-          $stmt->bind_param("ss", $username, $password_hash);
+          $stmt->bind_param('ss', $username, $password_hash);
           $stmt->execute();
           $user = $stmt->get_result()->fetch_assoc();
           if ($user == null) {
-              $validation_errors[] = "Τα στοιχεία που εισάγατε δεν είναι έγκυρα. Παρακαλούμε προσπαθήστε ξανά.";
+              $validation_errors[] = 'Τα στοιχεία που εισάγατε δεν είναι έγκυρα. Παρακαλούμε προσπαθήστε ξανά.';
           } else {
-              $_SESSION["user_id"] = $user["id"];
-              $type=$user["user_type"];
-              header("Location: perhome.php?cat=".$type);
+              $_SESSION['user_id'] = $user['id'];
+              $type = $user['user_type'];
+              header('Location: perhome.php?cat='.$type);
           }
       }
   }
 ?>
 <?php
-  $page_name = "login";
-  require("../inc/header.php");
+  $page_name = 'login';
+  require '../inc/header.php';
 ?>
 
 <div class="container">
@@ -81,4 +83,4 @@
   </div>
 </div>
 
-<?php require("../inc/footer.php"); ?>
+<?php require '../inc/footer.php'; ?>
