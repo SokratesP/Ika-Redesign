@@ -1,6 +1,6 @@
 <?php
-   $page_name = "Ικα Επικοινωνία";
-   include("../inc/header.php");
+   $page_name = 'Ικα Επικοινωνία';
+   include '../inc/header.php';
 ?>
 
 <ol class="breadcrumb">
@@ -114,4 +114,4 @@
 	</div>
 </div>
 
-<?php include("../inc/footer.php") ?>
+<?php include '../inc/footer.php'?>

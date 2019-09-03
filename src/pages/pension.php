@@ -1,55 +1,55 @@
 <?php
-$page_name = "Ικα Αίτηση";
-   include("../inc/header.php");
+$page_name = 'Ικα Αίτηση';
+   include '../inc/header.php';
 ?>
 <?php
 $validation_errors = [];
 $message = [];
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    if (empty($_POST["name"]))
-        $validation_errors[] = "Το Όνομα είναι υποχρεωτικό.";
-    else{
-        $query = "SELECT COUNT(*) AS count FROM pensions WHERE name = ?";
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (empty($_POST['name'])) {
+        $validation_errors[] = 'Το Όνομα είναι υποχρεωτικό.';
+    } else {
+        $query = 'SELECT COUNT(*) AS count FROM pensions WHERE name = ?';
         $stmt = $con->prepare($query);
-        $stmt->bind_param("s", $_POST["name"]);
+        $stmt->bind_param('s', $_POST['name']);
         $stmt->execute();
         $results = $stmt->get_result()->fetch_assoc();
-        if ($results["count"] > 0) {
-            $validation_errors[] = "Έχει καταχωρηθεί ήδη αίτηση για αυτό το πρόσωπο.";
+        if ($results['count'] > 0) {
+            $validation_errors[] = 'Έχει καταχωρηθεί ήδη αίτηση για αυτό το πρόσωπο.';
         }
-      }
+    }
 
-    if (empty($_POST["ensima"]))
-      $validation_errors[] = "Ο αριθμός των ενσύμων είναι υποχρεωτικος. Παρακαλώ ελέγξτε πάλι τα στοιχεία σας.";
-    elseif (!is_numeric($_POST["ensima"]))
-      $validation_errors[] = "Μη έγκυρος αριθμός.";
+    if (empty($_POST['ensima'])) {
+        $validation_errors[] = 'Ο αριθμός των ενσύμων είναι υποχρεωτικος. Παρακαλώ ελέγξτε πάλι τα στοιχεία σας.';
+    } elseif (!is_numeric($_POST['ensima'])) {
+        $validation_errors[] = 'Μη έγκυρος αριθμός.';
+    }
 
-    if (empty($_POST["hmeresd"]))
-      $validation_errors[] = "Ο αριθμός των ημερών εργασίας είναι υποχρεωτικος. Παρακαλώ ελέγξτε πάλι τα στοιχεία σας.";
-    elseif (!is_numeric($_POST["hmeresd"]))
-      $validation_errors[] = "Μη έγκυρος αριθμός.";
-
+    if (empty($_POST['hmeresd'])) {
+        $validation_errors[] = 'Ο αριθμός των ημερών εργασίας είναι υποχρεωτικος. Παρακαλώ ελέγξτε πάλι τα στοιχεία σας.';
+    } elseif (!is_numeric($_POST['hmeresd'])) {
+        $validation_errors[] = 'Μη έγκυρος αριθμός.';
+    }
 
     // If no errors exist
     if (empty($validation_errors)) {
-        $query = "INSERT INTO pensions (id,name,ensima,hmeresd) VALUES (?, ?, ?,?)";
+        $query = 'INSERT INTO pensions (id,name,ensima,hmeresd) VALUES (?, ?, ?,?)';
         $stmt = $con->prepare($query);
-        $stmt->bind_param("isii",
+        $stmt->bind_param('isii',
             $_POST[$user['id']],
-            $_POST["name"],
-            $_POST["ensima"],
-            $_POST["hmeresd"]
+            $_POST['name'],
+            $_POST['ensima'],
+            $_POST['hmeresd']
         );
         $stmt->execute();
-        header("Location: success.php?id=2");
+        header('Location: success.php?id=2');
     }
 }?>
 
 
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-  <li class="breadcrumb-item"><a href=<?php echo "perhome.php?cat=". $user['user_type'];?> >Ηλεκτρονικές Υπηρεσίες</a></li>
+  <li class="breadcrumb-item"><a href=<?php echo 'perhome.php?cat='.$user['user_type']; ?> >Ηλεκτρονικές Υπηρεσίες</a></li>
   <li class="breadcrumb-item  active">Αίτηση Συνταξιοδότησης</li>
 </ol>
 
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="form-group row">
         <label class="col-md-4 control-label" for="name" style="text-align: center;">Όνομα</label>  
           <div class="col-md-4">
-            <input id="name" name="name" type="text" value="<?php echo $user['first_name']." ".$user['last_name'];?>" class="form-control input-md"> 
+            <input id="name" name="name" type="text" value="<?php echo $user['first_name'].' '.$user['last_name']; ?>" class="form-control input-md"> 
           </div>
       </div>
 
@@ -111,4 +111,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 </div>
 
-<?php include("../inc/footer.php") ?>
+<?php include '../inc/footer.php'?>

@@ -1,4 +1,4 @@
-<?php require("config.php") ?>
+<?php require 'config.php'?>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title><?php echo $page_name;?></title>
+    <title><?php echo $page_name; ?></title>
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="../css/index.css" type="text/css"/>
     
@@ -49,7 +49,7 @@
         <div class="upLogIn col-2">
           <?php if ($user != null): ?>
           <div class="logedin">
-            <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='profile.php'> ". ucfirst($user['first_name'])."</a>"?>
+            <?php echo "<a style='color: white; margin-right:0.938em;font-weight:400;font-size:1.625em; ' href='profile.php'> ".ucfirst($user['first_name']).'</a>'?>
             <a class="btn btn-danger" style="margin-left: 1.875em;  " href="logout.php">Έξοδος</a>
           </div>
           
@@ -108,18 +108,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item <?= $page_name == "index" ? "active" : "" ?>">
+            <li class="nav-item <?= $page_name == 'index' ? 'active' : '' ?>">
               <a class="nav-link" href="../pages/index.php">Αρχική</a>
             </li>
             <li class="nav-item">
-              <?php 
-              if(empty($user['user_type'])){
-                $cat="gen";
-              }else{
-                $cat=$user['user_type'];
+              <?php
+              if (empty($user['user_type'])) {
+                  $cat = 'gen';
+              } else {
+                  $cat = $user['user_type'];
               }
               ?>
-              <a class="nav-link" href=<?php echo "perhome.php?cat=". $cat;?>>Υπηρεσίες</a>
+              <a class="nav-link" href=<?php echo 'perhome.php?cat='.$cat; ?>>Υπηρεσίες</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../pages/contact.php">Χρήσιμες Πληροφορίες</a>

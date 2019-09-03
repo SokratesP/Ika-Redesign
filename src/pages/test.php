@@ -1,6 +1,6 @@
 <?php
-   $page_name = "ΙΚΑ τετσ";
-   include("../inc/header.php");
+   $page_name = 'ΙΚΑ τετσ';
+   include '../inc/header.php';
 ?> 
 <link rel="stylesheet" href="../css/test.css" type="text/css"/>
 
@@ -53,7 +53,7 @@
     <button name="submit">Submit both forms</button>
 </div>
 
-<?php include("../inc/footer.php") ?>
+<?php include '../inc/footer.php'?>
 
 <div class="form-group-si row" style="padding-bottom:1.3em;">
                             <label class="col-md-4 control-label"  for="amka" style="text-align: center;">Ιδιότητα</label>

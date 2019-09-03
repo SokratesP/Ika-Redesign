@@ -1,19 +1,19 @@
 <?php
-   $page_name = "Ικα Υπηρεσίες";
-   include("../inc/header.php");
+   $page_name = 'Ικα Υπηρεσίες';
+   include '../inc/header.php';
 ?>
 
 <link rel="stylesheet" href="../css/perhome.css" type="text/css"/>
 
 <ol class="breadcrumb">
-	<li class="breadcrumb-item"><a href=<?php echo "perhome.php?cat=". $user['user_type'];?> >Ηλεκτρονικές Υπηρεσίες</a></li>
+	<li class="breadcrumb-item"><a href=<?php echo 'perhome.php?cat='.$user['user_type']; ?> >Ηλεκτρονικές Υπηρεσίες</a></li>
 </ol>
 
 <div class="container">
 	<h2 align="center" class="pagetitle">Ηλεκτρονικές Υπηρεσίες</h2>
 </div>
 
-<?php if (/*$user['user_type'] == "syntaksiouxos" or*/ $_GET['cat'] =="syntaksiouxos" ): ?>	
+<?php if (/*$user['user_type'] == "syntaksiouxos" or*/ $_GET['cat'] == 'syntaksiouxos'): ?>	
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -123,7 +123,7 @@
 	</div>
 </div>
 
-<?php elseif ( /*$user['user_type'] == "ergodotis" or*/ $_GET['cat'] =="ergodotis"): ?>
+<?php elseif ( /*$user['user_type'] == "ergodotis" or*/ $_GET['cat'] == 'ergodotis'): ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -233,7 +233,7 @@
 	</div>
 </div>
 
-<?php elseif (/*$user['user_type'] == "asfalismenos" or*/ $_GET['cat'] =="asfalismenos"): ?>
+<?php elseif (/*$user['user_type'] == "asfalismenos" or*/ $_GET['cat'] == 'asfalismenos'): ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -343,7 +343,7 @@
 	</div>
 </div>
 
-<?php elseif($_GET['cat'] =="gen"):?>
+<?php elseif ($_GET['cat'] == 'gen'):?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -456,4 +456,4 @@
 
 </div></div></div></div>
 
-<?php include("../inc/footer.php") ?>
+<?php include '../inc/footer.php'?>
